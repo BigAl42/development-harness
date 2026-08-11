@@ -1,0 +1,12 @@
+name: development-harness
+version: 0.2.0
+description: Portable Harness Rules (OKF v0.2) und APM-Primitives für übergreifende Agent-Konfiguration
+author: BigAl42
+license: MIT
+includes: auto
+
+dependencies:
+  apm: []
+  mcp: []
+
+scripts: {}
