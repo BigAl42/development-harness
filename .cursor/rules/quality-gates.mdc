@@ -1,0 +1,26 @@
+---
+description: Tests und Builds müssen vor Commit grün sein — als Template für projekt-spezifische Anpassung
+globs: "**"
+---
+
+# Quality Gates vor Commit
+
+## Tests
+
+Vor Commit alle relevanten Tests erfolgreich. Projekt-Test-Kommando verwenden (`npm test`, `cargo test`, etc.).
+
+## Build
+
+Produktions-/Release-Build mindestens einmal erfolgreich, wenn Build-relevante Änderungen vorliegen.
+
+## Hooks
+
+Pre-Commit-Hooks respektieren; in CI ggf. deaktiviert.
+
+## Neue Features
+
+Passende Test-Abdeckung; Build-Änderungen verifizieren.
+
+**Hinweis:** Konkrete Befehle im Zielprojekt in `.cursor/rules/` oder zusätzlichen Instructions definieren.
+
+Quelle: `okf/guides/quality-gates.md` (generalisiert aus event-pos-desktop)

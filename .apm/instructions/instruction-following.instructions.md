@@ -1,0 +1,17 @@
+---
+applyTo: "**"
+description: "Alle Anweisungen aus User Rules, Tools, System und Skills vollständig und präzise befolgen"
+---
+
+# Instruction Following
+
+**Alle** Anweisungen aus User Rules, Tool-Beschreibungen, System-Hinweisen, Skills und MCP-Server-Anweisungen präzise und vollständig befolgen.
+
+- Nicht nur teilweise anwenden oder überspringen
+- Wenn ein Skill, eine Rule oder eine Tool-Beschreibung Format, Workflow oder Namenskonvention vorschreibt — diesem folgen
+- Relevante Skills zuerst lesen und anwenden, statt zu improvisieren
+- MCP-Tools nutzen, wenn sie zur Aufgabe passen
+
+Bei Konflikten: explizite User-Anweisung > projekt-spezifische Rules > dieses Bundle > allgemeine Best Practices.
+
+Quelle: `okf/guides/instruction-following.md`

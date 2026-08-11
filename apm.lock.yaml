@@ -1,0 +1,82 @@
+lockfile_version: '1'
+generated_at: '2026-08-11T08:09:16.391647+00:00'
+dependencies: []
+deployments:
+- kind: project-relative
+  target: agents
+  value: .agents/skills/okf-rules
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: agents
+  value: .agents/skills/okf-rules/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:11849f49484cd48c75755a6a4144e5586283e18901050404875c689514c8fd10
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/coding-principles.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:9a50e488c5bbd5180c417fc6b2df8cfe3ee2f3aadd08b7d4771e15cf2b369ea7
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/communication.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:de6a8f8feeec02c04b9f83de261bc69daf324b6f101be1bd6ffe7496c0cc262b
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/context-reasoning.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:589c5caea22e368ef1f7755f7e5f7ca4de71156b45be1c216b49f8699c854199
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/instruction-following.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:d36cfb375f2fd7fae74b77d5e961cf7c21e0f02dda66a1f78fd122a2614203fe
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/quality-gates.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:de0e0e456cd106cde275181560464155a70cdf696c8f3b8408aeeeb2a4d0cae8
+local_deployed_files:
+- .agents/skills/okf-rules
+- .agents/skills/okf-rules/SKILL.md
+- .cursor/rules/coding-principles.mdc
+- .cursor/rules/communication.mdc
+- .cursor/rules/context-reasoning.mdc
+- .cursor/rules/instruction-following.mdc
+- .cursor/rules/quality-gates.mdc
+local_deployed_file_hashes:
+  .agents/skills/okf-rules/SKILL.md: sha256:11849f49484cd48c75755a6a4144e5586283e18901050404875c689514c8fd10
+  .cursor/rules/coding-principles.mdc: sha256:9a50e488c5bbd5180c417fc6b2df8cfe3ee2f3aadd08b7d4771e15cf2b369ea7
+  .cursor/rules/communication.mdc: sha256:de6a8f8feeec02c04b9f83de261bc69daf324b6f101be1bd6ffe7496c0cc262b
+  .cursor/rules/context-reasoning.mdc: sha256:589c5caea22e368ef1f7755f7e5f7ca4de71156b45be1c216b49f8699c854199
+  .cursor/rules/instruction-following.mdc: sha256:d36cfb375f2fd7fae74b77d5e961cf7c21e0f02dda66a1f78fd122a2614203fe
+  .cursor/rules/quality-gates.mdc: sha256:de0e0e456cd106cde275181560464155a70cdf696c8f3b8408aeeeb2a4d0cae8
