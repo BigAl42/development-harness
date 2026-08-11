@@ -1,34 +1,28 @@
 ---
 applyTo: "**"
-description: "OKF v0.2 anwenden: type-Pflichtfeld, Bundle-Struktur, Trust-Signale, OKF-first dann APM spiegeln"
+description: "OKF v0.2 + Harness Rules: type-Pflichtfeld, okf/harness-rules/ als Source, Targets nur generiert"
+harnessRule: okf-v0.2-application
+source: okf/guides/okf-v0.2-application.md
 ---
 
-# OKF v0.2 anwenden
+# OKF v0.2 + Harness Rules
 
-Dieses Repo targetiert **OKF Version 0.2**. Bei jeder Arbeit an Regeln, Skills oder Wissensdokumenten:
+## Source of Truth
 
-## Pflicht bei OKF-Authoring
+- **Harness Rules:** `okf/harness-rules/*.md` (`type: Harness Rule`)
+- **Playbooks/Meta:** `okf/guides/`, `okf/concepts/`, `okf/reference/`
+- **Nicht** Source: `.cursor/rules/`, `.agents/skills/` (generierte Targets)
 
-1. Jede Concept-Datei in `okf/` braucht parsebares Frontmatter mit **nicht-leerem `type`**
-2. Reservierte Dateinamen: nur `index.md` (mit optional `okf_version: "0.2"`) und `log.md`
-3. Bundle-root `okf/index.md` deklariert `okf_version: "0.2"`
+## OKF v0.2 Pflicht
 
-## v0.2-Felder nutzen
-
-- `type` (Pflicht), `title`, `description`, `tags`
-- Trust/Lifecycle: `generated`, `verified`, `status`, `stale_after`, `sources`
-- Actor: `human:`, `agent/`, `process:`
+- `type` auf jedem Concept
+- `okf_version: "0.2"` in `okf/index.md`
 
 ## Workflow
 
-1. OKF in `okf/` ändern (Source of Truth)
-2. `okf/index.md` und `okf/log.md` aktualisieren
-3. `.apm/instructions/` spiegeln
-4. `apm install` ausführen
-
-## Konsum
-
-Vor Anwendung einer Regel: `status`, `stale_after` und `verified` prüfen. Unbekannte `type`-Werte tolerant behandeln.
+1. Harness Rule in `okf/harness-rules/` bearbeiten
+2. `.apm/instructions/` spiegeln (`harnessRule` + `source` im Frontmatter)
+3. `apm install` — Targets werden generiert, nicht manuell gepflegt
 
 Spec: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
 

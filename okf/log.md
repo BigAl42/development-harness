@@ -2,5 +2,6 @@
 
 ## 2026-08-11
 
-* **Update**: OKF-v0.2-Konformität — `type`-Pflichtfeld, `okf_version` in index.md, Playbook „OKF v0.2 anwenden“ und APM-Instruction ergänzt
-* **Creation**: Initiales OKF-Bundle mit übergreifenden Agent-Regeln (extrahiert aus Cursor User Rules und event-pos-desktop)
+* **Update**: Harness-Rules-Modell — Regeln nach `okf/harness-rules/` (`type: Harness Rule`); `.cursor/rules/` nur noch generierte Targets (gitignored)
+* **Update**: OKF v0.2 Konformität und Meta-Playbook
+* **Creation**: Initiales Bundle (extrahiert aus Cursor User Rules und event-pos-desktop)

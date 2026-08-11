@@ -32,18 +32,21 @@ Reservierte Dateinamen dürfen **keine** Concept-Dokumente sein.
 
 ```
 okf/
-├── index.md              # okf_version: "0.2" (einziges erlaubtes Frontmatter)
-├── log.md                # Änderungshistorie (neueste zuerst)
-├── concepts/             # Grundprinzipien, abstrakte Ideen
-├── guides/               # Anwendbare Playbooks und Regeln
-└── reference/            # Referenz-Material (Mappings, Spec-Hinweise)
+├── index.md              # okf_version: "0.2"
+├── log.md
+├── harness-rules/        # Harness Rules (type: Harness Rule) — SOURCE OF TRUTH
+├── concepts/             # Modell, Architektur
+├── guides/               # Playbooks (OKF-Authoring, Meta)
+└── reference/            # Deployment-Mapping, Spec-Hinweise
 ```
+
+Harness Rules sind **harness-agnostisch**. `.cursor/rules/` und ähnliche Pfade sind nur generierte Deploy-Targets — siehe [Harness Rules — Modell](/concepts/harness-rules-model.md).
 
 ## Frontmatter-Felder (v0.2)
 
 | Feld | Pflicht | Verwendung |
 |------|---------|------------|
-| `type` | **ja** | z. B. `Playbook`, `Reference`, `Agent Rule` |
+| `type` | **ja** | z. B. `Harness Rule`, `Playbook`, `Reference` |
 | `title` | empfohlen | Anzeigename |
 | `description` | empfohlen | Ein Satz für Index und Suche |
 | `tags` | optional | Querschnitts-Kategorien |
@@ -65,23 +68,22 @@ Trust-Tier aus `verified` ableiten: unverified → machine-confirmed → human-r
 
 ## Cross-Links
 
-Bundle-relative Links bevorzugen: `[Titel](/guides/coding-principles.md)` (führendes `/`).
+Bundle-relative Links: `[Titel](/harness-rules/coding-principles.md)`.
 
 ## Authoring-Workflow (dieses Repo)
 
-1. **OKF zuerst** — Regel in `okf/` als Concept-Dokument mit `type` anlegen/ändern
-2. **Frontmatter prüfen** — mindestens `type`; bei Agent-generiertem Content `generated` setzen
-3. **Index aktualisieren** — Eintrag in `okf/index.md` mit `title`/`description` aus Frontmatter
-4. **Log pflegen** — Eintrag in `okf/log.md` (ISO-Datum, neueste zuerst)
-5. **APM spiegeln** — entsprechende `.apm/instructions/*.instructions.md` synchron halten
-6. **Deployen** — `apm install` ausführen
+1. **Harness Rule** in `okf/harness-rules/` anlegen/ändern (`type: Harness Rule`)
+2. Frontmatter prüfen — mindestens `type`; bei Agent-Content `generated` setzen
+3. `okf/index.md` und `okf/log.md` aktualisieren
+4. `.apm/instructions/` spiegeln (`harnessRule` + `source` im Frontmatter)
+5. `apm install` — generiert Harness-Targets; **nicht** `.cursor/rules/` manuell editieren
 
 ## Konsum-Workflow (Agent)
 
 1. Bundle-Root `okf/index.md` lesen → `okf_version` prüfen
 2. Relevante Concepts per `type`, `tags` oder Index laden
 3. Trust-Signale (`verified`, `stale_after`, `status`) vor Anwendung beachten
-4. Bei Widerspruch: projekt-spezifische Regeln > dieses Bundle > allgemeine Best Practices
+4. Bei Widerspruch: User > Projekt-Regeln > Harness Rules > Best Practices
 
 ## Was nicht in OKF gehört
 

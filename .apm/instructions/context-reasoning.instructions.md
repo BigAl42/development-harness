@@ -1,13 +1,12 @@
 ---
 applyTo: "**"
-description: "Intent aus gesamter Konversation ableiten; laufende Aufgabe vs. Richtungswechsel unterscheiden"
+description: "Harness Rule: Intent aus gesamter Konversation ableiten"
+harnessRule: context-reasoning
+source: okf/harness-rules/context-reasoning.md
 ---
 
-# Context Reasoning
+# Harness Rule: Context Reasoning
 
-- Jede Nachricht im Licht der **gesamten** Konversation interpretieren
-- Unterliegendes Ziel und implizite Anforderungen aus dem Verlauf ableiten
-- Nachricht mitten in Aufgabe = meist Steuerung, kein Abbruch
-- Erfolgskriterium aus Gesprächsverlauf, nicht nur letzte Zeile
+Gesamte Konversation berücksichtigen. Nachricht mitten in Aufgabe = Steuerung. Erfolgskriterium aus Verlauf ableiten.
 
-Quelle: `okf/guides/context-reasoning.md`
+Quelle: `okf/harness-rules/context-reasoning.md`

@@ -1,6 +1,10 @@
 # APM package cache
 apm_modules/
 
+# Generierte Harness-Targets (Source of Truth ist okf/harness-rules/)
+.cursor/rules/
+.agents/skills/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -1,6 +1,6 @@
 name: development-harness
-version: 0.1.0
-description: Übergreifende OKF-Regeln, Skills und APM-Primitives für BigAl42-Projekte
+version: 0.2.0
+description: Portable Harness Rules (OKF v0.2) und APM-Primitives für übergreifende Agent-Konfiguration
 author: BigAl42
 license: MIT
 includes: auto

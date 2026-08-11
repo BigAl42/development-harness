@@ -1,26 +1,12 @@
 ---
 applyTo: "**"
-description: "Tests und Builds müssen vor Commit grün sein — als Template für projekt-spezifische Anpassung"
+description: "Harness Rule: Tests und Builds vor Commit — Template, konkrete Befehle im Projekt"
+harnessRule: quality-gates
+source: okf/harness-rules/quality-gates.md
 ---
 
-# Quality Gates vor Commit
+# Harness Rule: Quality Gates
 
-## Tests
+Prinzip: Vor Commit Tests grün, Build verifiziert. Konkrete Befehle in **Projekt-Regeln** des Ziel-Repos definieren — nicht hier.
 
-Vor Commit alle relevanten Tests erfolgreich. Projekt-Test-Kommando verwenden (`npm test`, `cargo test`, etc.).
-
-## Build
-
-Produktions-/Release-Build mindestens einmal erfolgreich, wenn Build-relevante Änderungen vorliegen.
-
-## Hooks
-
-Pre-Commit-Hooks respektieren; in CI ggf. deaktiviert.
-
-## Neue Features
-
-Passende Test-Abdeckung; Build-Änderungen verifizieren.
-
-**Hinweis:** Konkrete Befehle im Zielprojekt in `.cursor/rules/` oder zusätzlichen Instructions definieren.
-
-Quelle: `okf/guides/quality-gates.md` (generalisiert aus event-pos-desktop)
+Quelle: `okf/harness-rules/quality-gates.md`

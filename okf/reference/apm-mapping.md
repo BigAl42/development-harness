@@ -1,37 +1,24 @@
 ---
 type: Reference
 title: OKF → APM Mapping
-description: Wie OKF-v0.2-Quelldateien in APM-Instructions und Harness-Ziele deployt werden
-tags: [apm, reference, okf]
+description: Mapping von OKF Harness Rules zu APM Instructions (nicht zu Cursor Rules)
+tags: [apm, reference, harness-rules]
 status: stable
 generated:
   by: agent/cursor-cloud
-  at: 2026-08-11T08:15:00Z
+  at: 2026-08-11T08:20:00Z
 ---
 
 # OKF → APM Mapping
 
-| OKF-Quelle | APM Instruction | applyTo | Priorität |
-|------------|-----------------|---------|-----------|
-| `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `**` | immer (Meta) |
-| `guides/instruction-following.md` | `instruction-following.instructions.md` | `**` | hoch |
-| `guides/communication.md` | `communication.instructions.md` | `**` | hoch |
-| `guides/coding-principles.md` | `coding-principles.instructions.md` | `**` | hoch |
-| `guides/context-reasoning.md` | `context-reasoning.instructions.md` | `**` | hoch |
-| `guides/quality-gates.md` | `quality-gates.instructions.md` | `**` | Template |
-| `concepts/agent-principles.md` | Skill `okf-rules` (Referenz) | — | — |
+Harness Rules leben in `okf/harness-rules/`. APM Instructions sind die deploybare Ableitung. Harness-Targets (`.cursor/rules/` etc.) werden generiert — siehe [Harness Deployment](/reference/harness-deployment.md).
 
-## Workflow
-
-1. OKF-v0.2-Concept in `okf/` bearbeiten (`type` Pflicht)
-2. `okf/index.md` und `okf/log.md` aktualisieren
-3. Entsprechende `.apm/instructions/` spiegeln
-4. `apm install` ausführen
-
-## Consumer-Projekt
-
-```yaml
-dependencies:
-  apm:
-    - BigAl42/development-harness#v0.1.0
-```
+| Harness Rule (OKF) | APM Instruction | harnessRule |
+|--------------------|-----------------|-------------|
+| `harness-rules/instruction-following.md` | `instruction-following.instructions.md` | instruction-following |
+| `harness-rules/communication.md` | `communication.instructions.md` | communication |
+| `harness-rules/coding-principles.md` | `coding-principles.instructions.md` | coding-principles |
+| `harness-rules/context-reasoning.md` | `context-reasoning.instructions.md` | context-reasoning |
+| `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | quality-gates |
+| `harness-rules/agent-principles.md` | Skill `harness-rules` (Referenz) | agent-principles |
+| `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application |

@@ -1,24 +1,12 @@
 ---
 applyTo: "**"
-description: "Kommunikation: Code-Zitate, Markdown-Links, klare Prosa, proportionale Antwortlänge"
+description: "Harness Rule: Kommunikation — Code-Zitate, Markdown-Links, klare Prosa"
+harnessRule: communication
+source: okf/harness-rules/communication.md
 ---
 
-# Kommunikation
+# Harness Rule: Kommunikation
 
-## Code-Zitate
+Code-Zitate als `startLine:endLine:filepath`. Opening-Fence auf eigener Zeile. Vollständige URLs/Pfade. Prosa präzise und proportional. Bold/Backticks sparsam.
 
-Format: `startLine:endLine:filepath`. Opening-Fence auf eigener Zeile. Inhalt wörtlich; große Abschnitte mit `...` kürzen.
-
-## Links und Pfade
-
-Vollständige URLs und Dateipfade. Markdown-Links für Web-Inhalte.
-
-## Prosa
-
-Präzise, strukturiert, vollständige Sätze. Einfache Sprache. Antwortlänge proportional zur Aufgabe. Bold/Backticks sparsam. Kein Engagement-Baiting am Ende.
-
-## Diagramme
-
-Mermaid/ASCII für komplexe Flows — nicht für triviale Änderungen.
-
-Quelle: `okf/guides/communication.md`
+Quelle: `okf/harness-rules/communication.md`
