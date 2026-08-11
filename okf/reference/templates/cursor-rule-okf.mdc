@@ -1,0 +1,17 @@
+---
+description: Always-on OKF consume/maintain — read index → domain → concepts; update log; validate
+alwaysApply: true
+---
+
+# OKF (project)
+
+Before architecture, schema, ACL, deploy, or similar domain work:
+
+1. Read `okf/index.md`, then the relevant domain index and concepts
+2. Follow hard rules in `AGENTS.md` over OKF when they conflict — fix OKF if it drifts
+3. After behavioral changes: update concepts + `okf/log.md` in the same change
+4. Run the project OKF validator before merge
+
+Skip for pure typos / UI cosmetics with no behavioral change.
+
+Harness playbooks (portable): OKF Consume and Maintain, OKF Changelog, Rules Precedence.

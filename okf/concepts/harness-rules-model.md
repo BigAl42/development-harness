@@ -54,12 +54,20 @@ A **Cursor rule** (`.mdc`) is a **deploy target**, not the definition.
 
 ## Consumption priority
 
+Full order: [Rules Precedence](/harness-rules/rules-precedence.md).
+
+Short form:
+
 1. Explicit user instruction
-2. Project rules in the target repo
-3. Harness rules (this package)
-4. General best practices
+2. Project hard rules (`AGENTS.md`) and project harness targets
+3. Project OKF (explanatory; fix when it conflicts with hard rules)
+4. Harness rules (this package)
+5. General best practices
+
+Project layering patterns (overview doc vs OKF bundle): [Rule Layering](/guides/rule-layering.md).
 
 ## Related
 
 - [Harness Deployment](/reference/harness-deployment.md)
 - [Applying OKF v0.2](/guides/okf-v0.2-application.md)
+- [Extractions](/reference/extractions/README.md)

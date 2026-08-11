@@ -22,6 +22,8 @@ Derive intent from the full conversation. Keep scope minimal. Read project conve
 ## Related rules
 
 - [Instruction Following](/harness-rules/instruction-following.md)
+- [Rules Precedence](/harness-rules/rules-precedence.md)
 - [Coding Principles](/harness-rules/coding-principles.md)
 - [Context Reasoning](/harness-rules/context-reasoning.md)
+- [Session and Tenant Empty State](/harness-rules/session-tenant-empty-state.md)
 - [English Language](/harness-rules/english-language.md)

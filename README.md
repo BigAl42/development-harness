@@ -20,19 +20,23 @@ okf/harness-rules/     ← definition (Harness Rule, harness-agnostic)
 
 Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.md)
 
-## Harness rules (v0.3.0)
+## Harness rules (v0.4.0)
 
 | Harness Rule | File |
 |--------------|------|
 | Agent Principles | `okf/harness-rules/agent-principles.md` |
 | **English Language** | `okf/harness-rules/english-language.md` |
 | Instruction Following | `okf/harness-rules/instruction-following.md` |
+| **Rules Precedence** | `okf/harness-rules/rules-precedence.md` |
 | Communication | `okf/harness-rules/communication.md` |
 | Coding Principles | `okf/harness-rules/coding-principles.md` |
 | Context Reasoning | `okf/harness-rules/context-reasoning.md` |
+| **Session / Tenant Empty State** | `okf/harness-rules/session-tenant-empty-state.md` |
 | Quality Gates (template) | `okf/harness-rules/quality-gates.md` |
 
-**Project rules** (e.g. POS views in event-pos-desktop) stay in the target repo and complement harness rules.
+**Project rules** (e.g. POS views, energy-tracker AGENTS/OKF) stay in the target repo and complement harness rules. See [Rule Layering](okf/guides/rule-layering.md).
+
+Consumer learnings: [okf/reference/extractions/](okf/reference/extractions/README.md).
 
 All documentation in this package is **English**.
 
@@ -48,7 +52,7 @@ apm install
 ```yaml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.3.0
+    - BigAl42/development-harness#v0.4.0
 ```
 
 ```bash

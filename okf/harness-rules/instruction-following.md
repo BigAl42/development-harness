@@ -6,7 +6,7 @@ tags: [harness-rules, compliance]
 status: stable
 generated:
   by: agent/cursor-cloud
-  at: 2026-08-11T08:09:00Z
+  at: "2026-08-11T08:09:00Z"
 ---
 
 # Instruction Following
@@ -22,9 +22,13 @@ Follow **all** instructions from user rules, tool descriptions, system reminders
 
 ## Priority on conflicts
 
+See [Rules Precedence](/harness-rules/rules-precedence.md) for the full order (`AGENTS.md` / hard rules, project targets, project OKF, harness, defaults).
+
+Short form:
+
 1. Explicit user instruction in the current message
-2. Project rules in the target repo
+2. Project hard rules and project harness targets
 3. Harness Rules (this package)
 4. General best practices
 
-See [Harness Rules — Model](/concepts/harness-rules-model.md).
+See also [Harness Rules — Model](/concepts/harness-rules-model.md).

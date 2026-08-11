@@ -29,6 +29,10 @@ See [Harness Rules — Model](/okf/concepts/harness-rules-model.md).
 
 All bundle text is English — see [English Language](/okf/harness-rules/english-language.md).
 
+Conflict order: [Rules Precedence](/okf/harness-rules/rules-precedence.md).
+Project patterns: [Rule Layering](/okf/guides/rule-layering.md).
+Consumer extractions: [Extractions](/okf/reference/extractions/README.md).
+
 ## Spec
 
 https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md

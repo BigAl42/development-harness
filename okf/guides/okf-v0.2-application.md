@@ -36,11 +36,13 @@ okf/
 ├── log.md
 ├── harness-rules/        # Harness Rules (type: Harness Rule) — SOURCE OF TRUTH
 ├── concepts/             # Model, architecture
-├── guides/               # Playbooks (OKF authoring, meta)
-└── reference/            # Deployment mapping, spec notes
+├── guides/               # Playbooks (OKF authoring, consume/maintain, layering)
+└── reference/            # Deployment, templates, validators, extractions
 ```
 
 Harness rules are **harness-agnostic**. `.cursor/rules/` and similar paths are generated deploy targets only — see [Harness Rules — Model](/concepts/harness-rules-model.md).
+
+For **consumer** in-repo OKF (domain catalogs), see [OKF v0.2 In-Repo Layout](/reference/okf-v0.2-in-repo-layout.md) and [OKF Consume and Maintain](/guides/okf-consume-and-maintain.md).
 
 ## Frontmatter fields (v0.2)
 
@@ -85,7 +87,7 @@ Write all bundle content in English — see [English Language](/harness-rules/en
 1. Read bundle root `okf/index.md` → check `okf_version`
 2. Load relevant concepts by `type`, `tags`, or index
 3. Respect trust signals (`verified`, `stale_after`, `status`) before applying
-4. On conflict: user > project rules > harness rules > best practices
+4. On conflict: follow [Rules Precedence](/harness-rules/rules-precedence.md)
 
 ## What does not belong in OKF
 

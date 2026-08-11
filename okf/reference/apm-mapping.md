@@ -6,7 +6,7 @@ tags: [apm, reference, harness-rules]
 status: stable
 generated:
   by: agent/cursor-cloud
-  at: 2026-08-11T08:20:00Z
+  at: "2026-08-11T11:35:00Z"
 ---
 
 # OKF → APM Mapping
@@ -17,9 +17,13 @@ Harness rules live in `okf/harness-rules/`. APM instructions are the deployable 
 |--------------------|-----------------|-------------|
 | `harness-rules/english-language.md` | `english-language.instructions.md` | english-language |
 | `harness-rules/instruction-following.md` | `instruction-following.instructions.md` | instruction-following |
+| `harness-rules/rules-precedence.md` | `rules-precedence.instructions.md` | rules-precedence |
 | `harness-rules/communication.md` | `communication.instructions.md` | communication |
 | `harness-rules/coding-principles.md` | `coding-principles.instructions.md` | coding-principles |
 | `harness-rules/context-reasoning.md` | `context-reasoning.instructions.md` | context-reasoning |
+| `harness-rules/session-tenant-empty-state.md` | `session-tenant-empty-state.instructions.md` | session-tenant-empty-state |
 | `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | quality-gates |
 | `harness-rules/agent-principles.md` | Skill `harness-rules` (reference) | agent-principles |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application |
+
+Guides and references under `okf/guides/` and `okf/reference/` are consumed via the OKF index; they are not all mirrored as always-on APM instructions.
