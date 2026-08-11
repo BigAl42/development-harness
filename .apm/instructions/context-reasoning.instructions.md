@@ -1,12 +1,12 @@
 ---
 applyTo: "**"
-description: "Harness Rule: Intent aus gesamter Konversation ableiten"
+description: "Harness Rule: Derive intent from the full conversation"
 harnessRule: context-reasoning
 source: okf/harness-rules/context-reasoning.md
 ---
 
 # Harness Rule: Context Reasoning
 
-Gesamte Konversation berücksichtigen. Nachricht mitten in Aufgabe = Steuerung. Erfolgskriterium aus Verlauf ableiten.
+Consider the **full** conversation. Mid-task messages are usually steering. Derive success criteria from the thread, not only the last line.
 
-Quelle: `okf/harness-rules/context-reasoning.md`
+Source: `okf/harness-rules/context-reasoning.md`

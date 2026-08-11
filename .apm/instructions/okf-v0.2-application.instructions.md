@@ -1,29 +1,31 @@
 ---
 applyTo: "**"
-description: "OKF v0.2 + Harness Rules: type-Pflichtfeld, okf/harness-rules/ als Source, Targets nur generiert"
+description: "OKF v0.2 + Harness Rules: type required, okf/harness-rules/ as source, targets generated only"
 harnessRule: okf-v0.2-application
 source: okf/guides/okf-v0.2-application.md
 ---
 
 # OKF v0.2 + Harness Rules
 
-## Source of Truth
+## Source of truth
 
-- **Harness Rules:** `okf/harness-rules/*.md` (`type: Harness Rule`)
-- **Playbooks/Meta:** `okf/guides/`, `okf/concepts/`, `okf/reference/`
-- **Nicht** Source: `.cursor/rules/`, `.agents/skills/` (generierte Targets)
+- **Harness rules:** `okf/harness-rules/*.md` (`type: Harness Rule`)
+- **Playbooks/meta:** `okf/guides/`, `okf/concepts/`, `okf/reference/`
+- **Not source:** `.cursor/rules/`, `.agents/skills/` (generated targets)
 
-## OKF v0.2 Pflicht
+## OKF v0.2 required
 
-- `type` auf jedem Concept
+- `type` on every concept
 - `okf_version: "0.2"` in `okf/index.md`
 
 ## Workflow
 
-1. Harness Rule in `okf/harness-rules/` bearbeiten
-2. `.apm/instructions/` spiegeln (`harnessRule` + `source` im Frontmatter)
-3. `apm install` — Targets werden generiert, nicht manuell gepflegt
+1. Edit harness rule in `okf/harness-rules/`
+2. Mirror `.apm/instructions/` (`harnessRule` + `source` in frontmatter)
+3. Run `apm install` — targets are generated, not edited manually
+
+Write bundle content in English.
 
 Spec: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
 
-Quelle: `okf/guides/okf-v0.2-application.md`
+Source: `okf/guides/okf-v0.2-application.md`

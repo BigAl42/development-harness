@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: Harness Deployment
-description: Ableitungskette von OKF Harness Rules zu APM Instructions und Harness-Targets
+description: Derivation chain from OKF harness rules to APM instructions and harness targets
 tags: [harness-rules, apm, deployment]
 status: stable
 generated:
@@ -11,10 +11,11 @@ generated:
 
 # Harness Deployment
 
-## Ableitungskette
+## Derivation chain
 
-| Harness Rule (OKF) | APM Instruction | Cursor (generiert) | Copilot (generiert) |
+| Harness Rule (OKF) | APM Instruction | Cursor (generated) | Copilot (generated) |
 |--------------------|-----------------|--------------------|---------------------|
+| `harness-rules/english-language.md` | `english-language.instructions.md` | `.cursor/rules/english-language.mdc` | `.github/instructions/` |
 | `harness-rules/instruction-following.md` | `instruction-following.instructions.md` | `.cursor/rules/instruction-following.mdc` | `.github/instructions/` |
 | `harness-rules/communication.md` | `communication.instructions.md` | `.cursor/rules/communication.mdc` | … |
 | `harness-rules/coding-principles.md` | `coding-principles.instructions.md` | `.cursor/rules/coding-principles.mdc` | … |
@@ -22,29 +23,29 @@ generated:
 | `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | `.cursor/rules/quality-gates.mdc` | … |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `.cursor/rules/okf-v0.2-application.mdc` | … |
 
-## Producer-Repo (development-harness)
+## Producer repo (development-harness)
 
-- **Committen:** `okf/harness-rules/`, `.apm/instructions/`, `apm.yml`, `apm.lock.yaml`
-- **Nicht committen:** `.cursor/rules/`, `.agents/skills/` (generierte Targets — siehe `.gitignore`)
+- **Commit:** `okf/harness-rules/`, `.apm/instructions/`, `apm.yml`, `apm.lock.yaml`
+- **Do not commit:** `.cursor/rules/`, `.agents/skills/` (generated targets — see `.gitignore`)
 
-## Consumer-Projekt
+## Consumer project
 
 ```yaml
 # apm.yml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.2.0
+    - BigAl42/development-harness#v0.3.0
 ```
 
 ```bash
-apm install    # deployt Harness Rules in erkannte Targets
+apm install    # deploys harness rules to detected targets
 ```
 
-Projekt-eigene Regeln bleiben im Consumer-Repo und ergänzen — ersetzen nicht — die Harness Rules.
+Project-specific rules stay in the consumer repo and **complement** — not replace — harness rules.
 
-## Workflow bei Änderungen
+## Change workflow
 
-1. Harness Rule in `okf/harness-rules/` bearbeiten
-2. `.apm/instructions/` spiegeln (`harnessRule`-Referenz beibehalten)
-3. `apm install` im Producer oder Consumer
-4. Generierte Targets entstehen neu — nicht manuell editieren
+1. Edit harness rule in `okf/harness-rules/`
+2. Mirror `.apm/instructions/` (keep `harnessRule` reference)
+3. Run `apm install` in producer or consumer
+4. Generated targets are recreated — do not edit manually

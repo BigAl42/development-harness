@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
 title: Instruction Following
-description: Alle Anweisungen aus User Rules, Tools, System und Skills vollständig befolgen
+description: Follow all instructions from user rules, tools, system, and skills completely
 tags: [harness-rules, compliance]
 status: stable
 generated:
@@ -11,20 +11,20 @@ generated:
 
 # Instruction Following
 
-## Regel
+## Rule
 
-**Alle** Anweisungen aus User Rules, Tool-Beschreibungen, System-Hinweisen, Skills und MCP-Server-Anweisungen präzise und vollständig befolgen.
+Follow **all** instructions from user rules, tool descriptions, system reminders, skills, and MCP server instructions precisely and completely.
 
-- Nicht nur teilweise anwenden oder überspringen
-- Wenn ein Skill, eine Rule oder eine Tool-Beschreibung Format, Workflow oder Namenskonvention vorschreibt — **diesem folgen**
-- Relevante Skills zuerst lesen und anwenden, statt zu improvisieren
-- MCP-Tools nutzen, wenn sie zur Aufgabe passen
+- Do not partially apply or skip them
+- When a skill, rule, or tool description prescribes format, workflow, or naming — **follow it**
+- Read and apply relevant skills first instead of improvising
+- Use MCP tools when they fit the task
 
-## Priorität bei Konflikten
+## Priority on conflicts
 
-1. Explizite User-Anweisung in der aktuellen Nachricht
-2. Projekt-Regeln im Ziel-Repo
-3. Harness Rules (dieses Package)
-4. Allgemeine Best Practices
+1. Explicit user instruction in the current message
+2. Project rules in the target repo
+3. Harness Rules (this package)
+4. General best practices
 
-Siehe [Harness Rules — Modell](/concepts/harness-rules-model.md).
+See [Harness Rules — Model](/concepts/harness-rules-model.md).

@@ -1,7 +1,7 @@
 ---
 type: Reference
 title: OKF → APM Mapping
-description: Mapping von OKF Harness Rules zu APM Instructions (nicht zu Cursor Rules)
+description: Mapping from OKF harness rules to APM instructions (not to Cursor rules)
 tags: [apm, reference, harness-rules]
 status: stable
 generated:
@@ -11,14 +11,15 @@ generated:
 
 # OKF → APM Mapping
 
-Harness Rules leben in `okf/harness-rules/`. APM Instructions sind die deploybare Ableitung. Harness-Targets (`.cursor/rules/` etc.) werden generiert — siehe [Harness Deployment](/reference/harness-deployment.md).
+Harness rules live in `okf/harness-rules/`. APM instructions are the deployable derivation. Harness targets (`.cursor/rules/` etc.) are generated — see [Harness Deployment](/reference/harness-deployment.md).
 
 | Harness Rule (OKF) | APM Instruction | harnessRule |
 |--------------------|-----------------|-------------|
+| `harness-rules/english-language.md` | `english-language.instructions.md` | english-language |
 | `harness-rules/instruction-following.md` | `instruction-following.instructions.md` | instruction-following |
 | `harness-rules/communication.md` | `communication.instructions.md` | communication |
 | `harness-rules/coding-principles.md` | `coding-principles.instructions.md` | coding-principles |
 | `harness-rules/context-reasoning.md` | `context-reasoning.instructions.md` | context-reasoning |
 | `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | quality-gates |
-| `harness-rules/agent-principles.md` | Skill `harness-rules` (Referenz) | agent-principles |
+| `harness-rules/agent-principles.md` | Skill `harness-rules` (reference) | agent-principles |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application |

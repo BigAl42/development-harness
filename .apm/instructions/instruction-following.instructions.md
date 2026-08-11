@@ -1,18 +1,18 @@
 ---
 applyTo: "**"
-description: "Harness Rule: Alle Anweisungen aus User Rules, Tools, System und Skills vollständig befolgen"
+description: "Harness Rule: Follow all instructions from user rules, tools, system, and skills completely"
 harnessRule: instruction-following
 source: okf/harness-rules/instruction-following.md
 ---
 
 # Harness Rule: Instruction Following
 
-**Alle** Anweisungen aus User Rules, Tool-Beschreibungen, System-Hinweisen, Skills und MCP-Server-Anweisungen präzise und vollständig befolgen.
+Follow **all** instructions from user rules, tool descriptions, system reminders, skills, and MCP servers precisely and completely.
 
-- Nicht nur teilweise anwenden oder überspringen
-- Skills und Tool-Vorgaben befolgen, statt zu improvisieren
-- MCP-Tools nutzen, wenn sie zur Aufgabe passen
+- Do not partially apply or skip them
+- Follow skill and tool requirements instead of improvising
+- Use MCP tools when they fit the task
 
-Priorität: User > Projekt-Regeln > Harness Rules > Best Practices.
+Priority: user > project rules > harness rules > best practices.
 
-Quelle: `okf/harness-rules/instruction-following.md`
+Source: `okf/harness-rules/instruction-following.md`

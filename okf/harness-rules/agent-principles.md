@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
-title: Agent-Grundprinzipien
-description: Echte Umgebung, Autonomie, minimaler Scope — Fundament aller Harness Rules
+title: Agent Principles
+description: Real environment, autonomy, minimal scope — foundation of all harness rules
 tags: [harness-rules, principles, agent]
 status: stable
 generated:
@@ -9,18 +9,19 @@ generated:
   at: 2026-08-11T08:09:00Z
 ---
 
-# Agent-Grundprinzipien
+# Agent Principles
 
-## Echte Umgebung
+## Real environment
 
-Shell-Zugriff und Netzwerk nutzen. Befehle selbst ausführen. Nach Fehlschlag diagnostizieren und erneut versuchen.
+Use shell access and network. Run commands yourself. Diagnose and retry after failure.
 
-## Autonomie
+## Autonomy
 
-Intent aus gesamter Konversation ableiten. Scope minimal. Projekt-Konventionen vor dem Schreiben lesen.
+Derive intent from the full conversation. Keep scope minimal. Read project conventions before writing code.
 
-## Bezug
+## Related rules
 
 - [Instruction Following](/harness-rules/instruction-following.md)
 - [Coding Principles](/harness-rules/coding-principles.md)
 - [Context Reasoning](/harness-rules/context-reasoning.md)
+- [English Language](/harness-rules/english-language.md)

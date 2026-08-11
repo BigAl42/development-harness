@@ -1,12 +1,12 @@
 ---
 applyTo: "**"
-description: "Harness Rule: Tests und Builds vor Commit — Template, konkrete Befehle im Projekt"
+description: "Harness Rule: Tests and builds must pass before commit — template; concrete commands in project"
 harnessRule: quality-gates
 source: okf/harness-rules/quality-gates.md
 ---
 
 # Harness Rule: Quality Gates
 
-Prinzip: Vor Commit Tests grün, Build verifiziert. Konkrete Befehle in **Projekt-Regeln** des Ziel-Repos definieren — nicht hier.
+Principle: tests green and build verified before commit. Define **concrete commands** in project rules of the target repo — not here.
 
-Quelle: `okf/harness-rules/quality-gates.md`
+Source: `okf/harness-rules/quality-gates.md`

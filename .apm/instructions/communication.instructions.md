@@ -1,12 +1,14 @@
 ---
 applyTo: "**"
-description: "Harness Rule: Kommunikation — Code-Zitate, Markdown-Links, klare Prosa"
+description: "Harness Rule: Communication — code citations, markdown links, clear prose"
 harnessRule: communication
 source: okf/harness-rules/communication.md
 ---
 
-# Harness Rule: Kommunikation
+# Harness Rule: Communication
 
-Code-Zitate als `startLine:endLine:filepath`. Opening-Fence auf eigener Zeile. Vollständige URLs/Pfade. Prosa präzise und proportional. Bold/Backticks sparsam.
+Code citations as `startLine:endLine:filepath`. Opening fence on its own line. Full URLs/paths. Precise prose proportional to task. Bold/backticks sparingly.
 
-Quelle: `okf/harness-rules/communication.md`
+Write in English (see english-language harness rule).
+
+Source: `okf/harness-rules/communication.md`

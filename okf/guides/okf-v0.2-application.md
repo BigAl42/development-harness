@@ -1,7 +1,7 @@
 ---
 type: Playbook
-title: OKF v0.2 anwenden
-description: Verbindliche Regeln zum Erstellen, Pflegen und Konsumieren von OKF-v0.2-konformen Knowledge Bundles in diesem Harness.
+title: Applying OKF v0.2
+description: Rules for creating, maintaining, and consuming OKF v0.2–conformant knowledge bundles in this harness
 tags: [okf, spec, authoring, conformance]
 status: stable
 generated:
@@ -14,82 +14,84 @@ sources:
     author: team:gcp-knowledge-catalog
 ---
 
-# OKF v0.2 anwenden
+# Applying OKF v0.2
 
-Dieses Bundle **targetiert OKF Version 0.2**. Jeder Agent, der Regeln schreibt, migriert oder konsumiert, hält sich an diese Playbook-Regeln.
+This bundle **targets OKF version 0.2**. Any agent authoring, migrating, or consuming rules must follow this playbook.
 
-## Konformität (Pflicht)
+## Conformance (required)
 
-Ein Bundle ist OKF-v0.2-konform, wenn:
+A bundle is OKF v0.2 conformant when:
 
-1. Jede nicht-reservierte `.md`-Datei parsebares YAML-Frontmatter hat
-2. Jedes Frontmatter ein **nicht-leeres `type`-Feld** enthält — das ist das einzige immer Pflichtfeld
-3. Reservierte Dateinamen (`index.md`, `log.md`) der Spezifikation folgen
+1. Every non-reserved `.md` file has parseable YAML frontmatter
+2. Every frontmatter block has a **non-empty `type` field** — the only always-required field
+3. Reserved filenames (`index.md`, `log.md`) follow the specification
 
-Reservierte Dateinamen dürfen **keine** Concept-Dokumente sein.
+Reserved filenames must **not** be used for concept documents.
 
-## Bundle-Struktur
+## Bundle structure
 
 ```
 okf/
 ├── index.md              # okf_version: "0.2"
 ├── log.md
 ├── harness-rules/        # Harness Rules (type: Harness Rule) — SOURCE OF TRUTH
-├── concepts/             # Modell, Architektur
-├── guides/               # Playbooks (OKF-Authoring, Meta)
-└── reference/            # Deployment-Mapping, Spec-Hinweise
+├── concepts/             # Model, architecture
+├── guides/               # Playbooks (OKF authoring, meta)
+└── reference/            # Deployment mapping, spec notes
 ```
 
-Harness Rules sind **harness-agnostisch**. `.cursor/rules/` und ähnliche Pfade sind nur generierte Deploy-Targets — siehe [Harness Rules — Modell](/concepts/harness-rules-model.md).
+Harness rules are **harness-agnostic**. `.cursor/rules/` and similar paths are generated deploy targets only — see [Harness Rules — Model](/concepts/harness-rules-model.md).
 
-## Frontmatter-Felder (v0.2)
+## Frontmatter fields (v0.2)
 
-| Feld | Pflicht | Verwendung |
-|------|---------|------------|
-| `type` | **ja** | z. B. `Harness Rule`, `Playbook`, `Reference` |
-| `title` | empfohlen | Anzeigename |
-| `description` | empfohlen | Ein Satz für Index und Suche |
-| `tags` | optional | Querschnitts-Kategorien |
-| `status` | optional | `draft` \| `stable` \| `deprecated` (Default: stable) |
+| Field | Required | Usage |
+|-------|----------|-------|
+| `type` | **yes** | e.g. `Harness Rule`, `Playbook`, `Reference` |
+| `title` | recommended | Display name |
+| `description` | recommended | One sentence for index and search |
+| `tags` | optional | Cross-cutting categories |
+| `status` | optional | `draft` \| `stable` \| `deprecated` (default: stable) |
 | `generated` | optional | `{ by: <actor>, at: <ISO-8601> }` |
-| `verified` | optional | Liste von `{ by, at }` — Trust-Signal |
-| `sources` | optional | Provenance mit `resource`, optional `id`, `author` |
-| `stale_after` | optional | `YYYY-MM-DD` — absolute Stale-Grenze |
+| `verified` | optional | List of `{ by, at }` — trust signal |
+| `sources` | optional | Provenance with `resource`, optional `id`, `author` |
+| `stale_after` | optional | `YYYY-MM-DD` — absolute stale date |
 
-Unbekannte Keys **beibehalten**, nicht verwerfen.
+Preserve unknown keys; do not discard them.
 
-## Actor-Konvention
+## Actor convention
 
-- `human:<name>` — menschlich autorisiert/bestätigt
-- `agent/<name>` oder `tool/<name>` — Agent/Tool erzeugt
-- `process:<name>` — automatisierter Prozess
+- `human:<name>` — human authorized/confirmed
+- `agent/<name>` or `tool/<name>` — agent/tool produced
+- `process:<name>` — automated process
 
-Trust-Tier aus `verified` ableiten: unverified → machine-confirmed → human-reviewed.
+Derive trust tier from `verified`: unverified → machine-confirmed → human-reviewed.
 
-## Cross-Links
+## Cross-links
 
-Bundle-relative Links: `[Titel](/harness-rules/coding-principles.md)`.
+Use bundle-relative links: `[Title](/harness-rules/coding-principles.md)`.
 
-## Authoring-Workflow (dieses Repo)
+## Authoring workflow (this repo)
 
-1. **Harness Rule** in `okf/harness-rules/` anlegen/ändern (`type: Harness Rule`)
-2. Frontmatter prüfen — mindestens `type`; bei Agent-Content `generated` setzen
-3. `okf/index.md` und `okf/log.md` aktualisieren
-4. `.apm/instructions/` spiegeln (`harnessRule` + `source` im Frontmatter)
-5. `apm install` — generiert Harness-Targets; **nicht** `.cursor/rules/` manuell editieren
+1. Create or edit a **harness rule** in `okf/harness-rules/` (`type: Harness Rule`)
+2. Validate frontmatter — at least `type`; set `generated` for agent-authored content
+3. Update `okf/index.md` and `okf/log.md`
+4. Mirror `.apm/instructions/` (`harnessRule` + `source` in frontmatter)
+5. Run `apm install` — generates harness targets; **do not** edit `.cursor/rules/` manually
 
-## Konsum-Workflow (Agent)
+Write all bundle content in English — see [English Language](/harness-rules/english-language.md).
 
-1. Bundle-Root `okf/index.md` lesen → `okf_version` prüfen
-2. Relevante Concepts per `type`, `tags` oder Index laden
-3. Trust-Signale (`verified`, `stale_after`, `status`) vor Anwendung beachten
-4. Bei Widerspruch: User > Projekt-Regeln > Harness Rules > Best Practices
+## Consumption workflow (agent)
 
-## Was nicht in OKF gehört
+1. Read bundle root `okf/index.md` → check `okf_version`
+2. Load relevant concepts by `type`, `tags`, or index
+3. Respect trust signals (`verified`, `stale_after`, `status`) before applying
+4. On conflict: user > project rules > harness rules > best practices
 
-- Harness-spezifische Deploy-Pfade (`.cursor/rules/`, `.agents/skills/`) — das ist APM-Schicht
-- Projekt-spezifische Befehle (npm, cargo) — gehören ins Zielprojekt, nicht ins übergreifende Bundle
+## What does not belong in OKF
 
-## Spec-Referenz
+- Harness-specific deploy paths (`.cursor/rules/`, `.agents/skills/`) — APM layer
+- Project-specific commands (npm, cargo) — target project, not this cross-cutting bundle
 
-Vollständige Norm: [OKF v0.2 SPEC](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
+## Spec reference
+
+Full norm: [OKF v0.2 SPEC](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)

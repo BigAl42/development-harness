@@ -19,7 +19,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:7b8efd09a1ad56a8d171630cd1a855980635d484f26f6d699e795702dd2c85fe
+  content_hash: sha256:2c96655da6a09c79b7848c0acde63cd22f251d5ce63daa044d931c90d6db82cd
 - kind: project-relative
   target: agents
   value: .agents/skills/okf-rules
@@ -46,7 +46,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:6f2b7fda23ae6f5f01519940e1ff20c40c765ff4661ec792d368c8dc3feba500
+  content_hash: sha256:aab4366e95e455f1613406a3ea8a473d8d8a766ed7dbf5c55043b3262976401b
 - kind: project-relative
   target: cursor
   value: .cursor/rules/communication.mdc
@@ -55,7 +55,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:120b0749feb6b6fe101a4a6b5f1b3dace227cc20d381b7689cd943cfdc7c6dd8
+  content_hash: sha256:74918c491fb7821835eaa6564bf858c05a5b1b72564e3c03ce0080c5ea84aed2
 - kind: project-relative
   target: cursor
   value: .cursor/rules/context-reasoning.mdc
@@ -64,7 +64,16 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:235c35f4f26be7b1caf021cca90d8c7e12cdbdb84c0f058014089a563cc5924d
+  content_hash: sha256:046ff66aee22e08591b40af154fc9b624517dde962339cda3355e021b2bb6cf0
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/english-language.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bac917f3fe53afdfed56004a4d288f732cb5a1b448c62c240c40fdb6850a1391
 - kind: project-relative
   target: cursor
   value: .cursor/rules/instruction-following.mdc
@@ -73,7 +82,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:3b66956aff784fbd7e32b2394810fc5031cf7f0fbf67e1e0110a5169517c478a
+  content_hash: sha256:0e0d655befbb86708ebda03ddd45cec50b63f7478ce49f06fb29a03327ed3771
 - kind: project-relative
   target: cursor
   value: .cursor/rules/okf-v0.2-application.mdc
@@ -82,7 +91,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:198ce8dd88a5241535de6b8579bf24135de90be7a60ce4f05dcf6efe5384abfa
+  content_hash: sha256:5cf51c9d8574e171852e042ea898bcfa937e535855a5b0fd3b94173d94d6e7ed
 - kind: project-relative
   target: cursor
   value: .cursor/rules/quality-gates.mdc
@@ -91,7 +100,7 @@ deployments:
   owners:
   - .
   active_owner: .
-  content_hash: sha256:531a2a480265a10709012486c093f9a09f9b16c846c60798af68131cc3bf429a
+  content_hash: sha256:6f0507a05a27961ce36401d69218140a1919777056c5ea186c160c7a262be6a1
 local_deployed_files:
 - .agents/skills/harness-rules
 - .agents/skills/harness-rules/SKILL.md
@@ -100,15 +109,17 @@ local_deployed_files:
 - .cursor/rules/coding-principles.mdc
 - .cursor/rules/communication.mdc
 - .cursor/rules/context-reasoning.mdc
+- .cursor/rules/english-language.mdc
 - .cursor/rules/instruction-following.mdc
 - .cursor/rules/okf-v0.2-application.mdc
 - .cursor/rules/quality-gates.mdc
 local_deployed_file_hashes:
-  .agents/skills/harness-rules/SKILL.md: sha256:7b8efd09a1ad56a8d171630cd1a855980635d484f26f6d699e795702dd2c85fe
+  .agents/skills/harness-rules/SKILL.md: sha256:2c96655da6a09c79b7848c0acde63cd22f251d5ce63daa044d931c90d6db82cd
   .agents/skills/okf-rules/SKILL.md: sha256:7466b383b8ea371a4dff903d79f789f0342e7094cf07be27cbf3f0eb7b5b82b2
-  .cursor/rules/coding-principles.mdc: sha256:6f2b7fda23ae6f5f01519940e1ff20c40c765ff4661ec792d368c8dc3feba500
-  .cursor/rules/communication.mdc: sha256:120b0749feb6b6fe101a4a6b5f1b3dace227cc20d381b7689cd943cfdc7c6dd8
-  .cursor/rules/context-reasoning.mdc: sha256:235c35f4f26be7b1caf021cca90d8c7e12cdbdb84c0f058014089a563cc5924d
-  .cursor/rules/instruction-following.mdc: sha256:3b66956aff784fbd7e32b2394810fc5031cf7f0fbf67e1e0110a5169517c478a
-  .cursor/rules/okf-v0.2-application.mdc: sha256:198ce8dd88a5241535de6b8579bf24135de90be7a60ce4f05dcf6efe5384abfa
-  .cursor/rules/quality-gates.mdc: sha256:531a2a480265a10709012486c093f9a09f9b16c846c60798af68131cc3bf429a
+  .cursor/rules/coding-principles.mdc: sha256:aab4366e95e455f1613406a3ea8a473d8d8a766ed7dbf5c55043b3262976401b
+  .cursor/rules/communication.mdc: sha256:74918c491fb7821835eaa6564bf858c05a5b1b72564e3c03ce0080c5ea84aed2
+  .cursor/rules/context-reasoning.mdc: sha256:046ff66aee22e08591b40af154fc9b624517dde962339cda3355e021b2bb6cf0
+  .cursor/rules/english-language.mdc: sha256:bac917f3fe53afdfed56004a4d288f732cb5a1b448c62c240c40fdb6850a1391
+  .cursor/rules/instruction-following.mdc: sha256:0e0d655befbb86708ebda03ddd45cec50b63f7478ce49f06fb29a03327ed3771
+  .cursor/rules/okf-v0.2-application.mdc: sha256:5cf51c9d8574e171852e042ea898bcfa937e535855a5b0fd3b94173d94d6e7ed
+  .cursor/rules/quality-gates.mdc: sha256:6f0507a05a27961ce36401d69218140a1919777056c5ea186c160c7a262be6a1
