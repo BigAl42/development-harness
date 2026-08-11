@@ -1,40 +1,37 @@
 ---
+type: Agent Rule
 title: Quality Gates vor Commit
-description: Tests und Builds müssen vor dem Commit grün sein — generalisiert aus Projekt-Praxis
-tags:
-  - testing
-  - ci
-  - commit
-status: active
-version: 0.1.0
+description: Tests und Builds müssen vor dem Commit grün sein — generalisiertes Template
+tags: [testing, ci, commit]
+status: stable
+generated:
+  by: agent/cursor-cloud
+  at: 2026-08-11T08:09:00Z
+sources:
+  - id: event-pos-tests-vor-commit
+    resource: /event-pos-desktop/.cursor/rules/tests-vor-commit.mdc
+    title: tests-vor-commit (event-pos-desktop)
 ---
 
 # Quality Gates vor Commit
 
-Generalisierte Regel aus der event-pos-desktop-Praxis (`tests-vor-commit`). Projekt-spezifische Befehle im Ziel-Repo anpassen.
+Generalisierte Regel aus event-pos-desktop. Konkrete Befehle im Ziel-Repo anpassen.
 
 ## Tests
 
-- **Vor jedem Commit müssen alle relevanten Tests erfolgreich durchlaufen**
-- Nicht committen, wenn Tests fehlschlagen oder übersprungen werden, um einen Commit zu erzwingen
-- Das projektübliche Test-Kommando verwenden (z. B. `npm test`, `npm run test:all`, `cargo test`, `pytest`)
+- Vor Commit alle relevanten Tests erfolgreich
+- Projekt-Test-Kommando verwenden (`npm test`, `cargo test`, etc.)
 
 ## Build
 
-- Zusätzlich zu Tests muss ein **Produktions- oder Release-Build** mindestens einmal erfolgreich sein, bevor Änderungen als commit-fertig gelten
-- Build-Fehler (TypeScript, Bundler, Linker, Compiler) sind zu beheben — nicht zu ignorieren
-- Bei Full-Stack- oder Desktop-Apps: Frontend-Build **und** Backend/Native-Build verifizieren, wenn beide betroffen sind
+- Produktions-/Release-Build mindestens einmal erfolgreich bei build-relevanten Änderungen
 
 ## Pre-Commit-Hooks
 
-- Wenn Husky oder andere Hooks vorhanden sind: deren Verhalten respektieren
-- In CI-Umgebungen kann Hook-Deaktivierung (`HUSKY=0` o. Ä.) vorgesehen sein — die Pipeline übernimmt dann die Checks
+- Hooks respektieren; in CI ggf. deaktiviert
 
-## Neue Funktionalität
+## Neue Features
 
-- Neue oder geänderte Features durch passende Tests abdecken
-- Build-relevante Änderungen (Dependencies, Config, Toolchain) durch Build-Schritte verifizieren
+- Passende Test-Abdeckung; Build-Änderungen verifizieren
 
-## Projekt-Anpassung
-
-Diese OKF-Regel ist ein **Template**. Konkrete Befehle gehören in projekt-spezifische Cursor Rules oder APM-Instructions im Ziel-Repo.
+**Hinweis:** Konkrete Befehle gehören in projekt-spezifische Rules im Zielprojekt.

@@ -1,45 +1,45 @@
 ---
 name: okf-rules
-description: Apply when loading or applying cross-project OKF rules from the development-harness bundle. Use when setting up agent context, reviewing rule compliance, or syncing OKF source files to APM instructions.
+description: Apply when loading, authoring, or syncing OKF v0.2 knowledge bundles. Use when setting up agent context, writing OKF concepts, reviewing conformance, or mirroring OKF to APM instructions.
 ---
 
 # OKF Rules Skill
 
-Lädt und wendet übergreifende Regeln aus dem OKF-Bundle `okf/` an.
+Lädt und wendet übergreifende Regeln aus dem **OKF-v0.2**-Bundle `okf/` an.
 
 ## When to Use
 
-- Agent-Kontext für ein neues Projekt einrichten
-- Prüfen, ob Antworten und Code den Harness-Regeln entsprechen
+- Agent-Kontext einrichten oder Regeln konsumieren
+- OKF-Concepts schreiben oder migrieren (v0.2-Konformität)
 - OKF-Quelldateien mit `.apm/instructions/` synchron halten
 - Consumer-Projekt mit `BigAl42/development-harness` verbinden
 
-## OKF-Struktur
+## OKF v0.2 (Pflicht)
+
+Vor jeder OKF-Änderung: [OKF v0.2 anwenden](/okf/guides/okf-v0.2-application.md) lesen.
+
+- Jedes Concept braucht `type` im Frontmatter
+- Bundle deklariert `okf_version: "0.2"` in `okf/index.md`
+- Trust-Felder nutzen: `generated`, `verified`, `status`, `sources`
+
+## Struktur
 
 ```
 okf/
-├── index.md              # Manifest
-├── concepts/             # Grundprinzipien
-├── guides/               # Anwendbare Regeln
-└── reference/            # APM-Mapping
+├── index.md              # okf_version: "0.2"
+├── log.md
+├── concepts/
+├── guides/
+└── reference/
 ```
-
-## Kern-Guides (always apply)
-
-| Datei | Thema |
-|-------|-------|
-| `guides/instruction-following.md` | Alle Anweisungen vollständig befolgen |
-| `guides/communication.md` | Code-Zitate, Prosa, Links |
-| `guides/coding-principles.md` | Scope, Konventionen, Tests |
-| `guides/context-reasoning.md` | Konversations-Intent |
 
 ## Workflow
 
-1. Relevante OKF-Datei lesen
-2. Bei Änderungen: OKF zuerst, dann `.apm/instructions/` spiegeln
-3. `apm install` ausführen
-4. Mapping siehe `okf/reference/apm-mapping.md`
+1. `okf/index.md` → Version prüfen
+2. Relevante Concepts laden (Trust-Signale beachten)
+3. Bei Änderungen: OKF zuerst → `.apm/instructions/` → `apm install`
+4. Mapping: `okf/reference/apm-mapping.md`
 
-## Agent-Prinzipien
+## Spec
 
-Siehe `okf/concepts/agent-principles.md` — echte Umgebung, Autonomie, minimale Diffs.
+https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md

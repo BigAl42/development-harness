@@ -1,11 +1,6 @@
-# Changelog — OKF Bundle
+# Directory Update Log
 
-## 0.1.0 — 2026-08-11
+## 2026-08-11
 
-### Added
-
-- Initiales OKF-Bundle mit sechs übergreifenden Regel-Dokumenten
-- Extraktion aus Cursor User Rules (Kommunikation, Coding, Instruction-Following, Context)
-- Generalisierte Qualitäts-Gates aus event-pos-desktop (`tests-vor-commit` → `quality-gates.md`)
-- APM-Package-Struktur (`.apm/instructions/`, Skill `okf-rules`)
-- Referenz-Dokument für OKF → APM Mapping
+* **Update**: OKF-v0.2-Konformität — `type`-Pflichtfeld, `okf_version` in index.md, Playbook „OKF v0.2 anwenden“ und APM-Instruction ergänzt
+* **Creation**: Initiales OKF-Bundle mit übergreifenden Agent-Regeln (extrahiert aus Cursor User Rules und event-pos-desktop)

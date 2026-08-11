@@ -20,18 +20,27 @@ development-harness/
 2. **APM** (`.apm/`) — deploybare Primitives für Cursor, Copilot, Claude Code, …
 3. **Harness-Ziele** — nach `apm install` z. B. `.agents/skills/`, `.github/instructions/`
 
+## OKF v0.2
+
+Das Bundle targetiert **[OKF Version 0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)**. Die Anwendung der Spec ist als eigene Instruction deployt:
+
+- OKF-Quelle: `okf/guides/okf-v0.2-application.md`
+- APM: `.apm/instructions/okf-v0.2-application.instructions.md`
+- Cursor: `.cursor/rules/okf-v0.2-application.mdc`
+
 ## Enthaltene OKF-Regeln (v0.1.0)
 
 Extrahiert aus übergreifenden Cursor User Rules und generalisierten Mustern aus [event-pos-desktop](https://github.com/BigAl42/event-pos-desktop):
 
-| Regel | Datei | alwaysApply |
-|-------|-------|-------------|
-| Instruction Following | `okf/guides/instruction-following.md` | ja |
-| Kommunikation | `okf/guides/communication.md` | ja |
-| Coding Principles | `okf/guides/coding-principles.md` | ja |
-| Context Reasoning | `okf/guides/context-reasoning.md` | ja |
-| Quality Gates | `okf/guides/quality-gates.md` | Template (projekt-anpassbar) |
-| Agent-Prinzipien | `okf/concepts/agent-principles.md` | via Skill |
+| Regel | Datei | type |
+|-------|-------|------|
+| **OKF v0.2 anwenden** | `okf/guides/okf-v0.2-application.md` | Playbook |
+| Instruction Following | `okf/guides/instruction-following.md` | Agent Rule |
+| Kommunikation | `okf/guides/communication.md` | Agent Rule |
+| Coding Principles | `okf/guides/coding-principles.md` | Agent Rule |
+| Context Reasoning | `okf/guides/context-reasoning.md` | Agent Rule |
+| Quality Gates | `okf/guides/quality-gates.md` | Agent Rule |
+| Agent-Prinzipien | `okf/concepts/agent-principles.md` | Playbook |
 
 Projekt-spezifische Regeln (z. B. Kassensystem-Views in event-pos-desktop) bleiben im jeweiligen Projekt.
 
@@ -64,13 +73,14 @@ dependencies:
 apm install
 ```
 
-## OKF pflegen
+## OKF pflegen (v0.2)
 
-1. Regel in `okf/guides/` oder `okf/concepts/` bearbeiten
-2. Entsprechende Datei unter `.apm/instructions/` synchron halten (siehe `okf/reference/apm-mapping.md`)
-3. `okf/log.md` aktualisieren
-4. `apm install` ausführen
-5. Version in `apm.yml` bumpen und taggen (`v0.1.0`, …)
+1. [OKF v0.2 anwenden](okf/guides/okf-v0.2-application.md) beachten — `type`-Pflichtfeld, Trust-Signale
+2. Regel in `okf/guides/` oder `okf/concepts/` bearbeiten
+3. `okf/index.md` und `okf/log.md` aktualisieren
+4. Entsprechende Datei unter `.apm/instructions/` synchron halten (siehe `okf/reference/apm-mapping.md`)
+5. `apm install` ausführen
+6. Version in `apm.yml` bumpen und taggen (`v0.1.0`, …)
 
 ## Skills
 

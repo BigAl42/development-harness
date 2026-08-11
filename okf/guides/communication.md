@@ -1,12 +1,12 @@
 ---
+type: Agent Rule
 title: Kommunikation mit dem User
 description: Code-Zitate, Markdown-Links, Prosa-Qualität und Antwortstruktur
-tags:
-  - communication
-  - writing
-status: active
-version: 0.1.0
-alwaysApply: true
+tags: [communication, writing]
+status: stable
+generated:
+  by: agent/cursor-cloud
+  at: 2026-08-11T08:09:00Z
 ---
 
 # Kommunikation
@@ -30,10 +30,9 @@ Format: `startLine:endLine:filepath` — Code-Citation-Blöcke sind besser als P
 - Einfache, zugängliche Sprache statt unnötigem Fachjargon
 - Antwortlänge proportional zur Aufgabenkomplexität
 - **Bold** und Backticks sparsam — nur für echte Betonung
-- Kein „§" in User-facing Text
-- Kein Engagement-Baiting am Ende („Sag Bescheid und ich …")
-- Commit- und PR-Beschreibungen: vollständige Sätze, gute Grammatik, nur relevante Details
+- Kein Engagement-Baiting am Ende
+- Commit- und PR-Beschreibungen: vollständige Sätze, gute Grammatik
 
 ## Diagramme
 
-- Mermaid und ASCII-Diagramme für komplexe Abläufe und Architektur — nicht für triviale Änderungen
+- Mermaid und ASCII-Diagramme für komplexe Abläufe — nicht für triviale Änderungen

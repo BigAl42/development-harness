@@ -1,38 +1,24 @@
 ---
-title: BigAl42 Development Harness
-description: Übergreifende Agent-Regeln und Skills für alle Projekte
-version: 0.1.0
-status: active
-tags:
-  - okf
-  - agent-rules
-  - apm
-  - cursor
-author: BigAl42
+okf_version: "0.2"
 ---
 
-# BigAl42 Development Harness — OKF Bundle
+# BigAl42 Development Harness
 
-Portable Wissensbasis für AI-Coding-Agenten. Dieses OKF-Bundle ist die **Single Source of Truth** für übergreifende Regeln; APM deployt daraus Instructions und Skills in Cursor, Copilot, Claude Code und andere Harnesses.
+Übergreifende Agent-Regeln als OKF-v0.2-konformes Knowledge Bundle. APM deployt daraus Instructions und Skills.
 
-## Kategorien
+# Concepts
 
-| Pfad | Inhalt |
-|------|--------|
-| [concepts/agent-principles.md](concepts/agent-principles.md) | Grundprinzipien für Agent-Verhalten |
-| [guides/instruction-following.md](guides/instruction-following.md) | Alle Anweisungen vollständig befolgen |
-| [guides/communication.md](guides/communication.md) | Kommunikation, Code-Zitate, Prosa-Qualität |
-| [guides/coding-principles.md](guides/coding-principles.md) | Code-Schreibprinzipien (Scope, Konventionen) |
-| [guides/quality-gates.md](guides/quality-gates.md) | Tests und Builds vor Commit |
-| [guides/context-reasoning.md](guides/context-reasoning.md) | Konversationshistorie und Intent |
-| [reference/apm-mapping.md](reference/apm-mapping.md) | Mapping OKF → APM → Harness-Ziele |
+* [Agent-Grundprinzipien](concepts/agent-principles.md) - Kernprinzipien für autonome Agenten
 
-## Verwendung
+# Guides
 
-1. **Als APM-Package**: In `apm.yml` des Zielprojekts `BigAl42/development-harness` als Dependency eintragen, dann `apm install`.
-2. **Direkt**: OKF-Dateien in den Agent-Kontext laden (z. B. `@okf/guides/coding-principles.md`).
-3. **Cursor Rules**: Nach `apm install` werden Instructions unter `.github/instructions/` bzw. harness-spezifischen Pfaden deployed.
+* [OKF v0.2 anwenden](guides/okf-v0.2-application.md) - Verbindliche OKF-v0.2-Authoring- und Konsum-Regeln
+* [Instruction Following](guides/instruction-following.md) - Alle Anweisungen vollständig befolgen
+* [Kommunikation](guides/communication.md) - Code-Zitate, Prosa, Links
+* [Coding Principles](guides/coding-principles.md) - Scope, Konventionen, Tests
+* [Context Reasoning](guides/context-reasoning.md) - Intent aus Konversationshistorie
+* [Quality Gates](guides/quality-gates.md) - Tests und Builds vor Commit (Template)
 
-## Herkunft
+# Reference
 
-Extrahiert aus übergreifenden Cursor User Rules und generalisierten Mustern aus bestehenden Projekten (z. B. event-pos-desktop).
+* [OKF → APM Mapping](reference/apm-mapping.md) - Mapping OKF-Quellen zu APM-Instructions

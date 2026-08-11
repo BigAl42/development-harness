@@ -1,35 +1,36 @@
 ---
+type: Reference
 title: OKF → APM Mapping
-description: Wie OKF-Quelldateien in APM-Instructions und Harness-Ziele deployt werden
-tags:
-  - apm
-  - reference
-status: active
-version: 0.1.0
+description: Wie OKF-v0.2-Quelldateien in APM-Instructions und Harness-Ziele deployt werden
+tags: [apm, reference, okf]
+status: stable
+generated:
+  by: agent/cursor-cloud
+  at: 2026-08-11T08:15:00Z
 ---
 
 # OKF → APM Mapping
 
-| OKF-Quelle | APM Instruction | applyTo | alwaysApply |
-|------------|-----------------|---------|-------------|
-| `guides/instruction-following.md` | `.apm/instructions/instruction-following.instructions.md` | `**` | ja |
-| `guides/communication.md` | `.apm/instructions/communication.instructions.md` | `**` | ja |
-| `guides/coding-principles.md` | `.apm/instructions/coding-principles.instructions.md` | `**` | ja |
-| `guides/context-reasoning.md` | `.apm/instructions/context-reasoning.instructions.md` | `**` | ja |
-| `guides/quality-gates.md` | `.apm/instructions/quality-gates.instructions.md` | `**` | nein (projekt-anpassbar) |
+| OKF-Quelle | APM Instruction | applyTo | Priorität |
+|------------|-----------------|---------|-----------|
+| `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `**` | immer (Meta) |
+| `guides/instruction-following.md` | `instruction-following.instructions.md` | `**` | hoch |
+| `guides/communication.md` | `communication.instructions.md` | `**` | hoch |
+| `guides/coding-principles.md` | `coding-principles.instructions.md` | `**` | hoch |
+| `guides/context-reasoning.md` | `context-reasoning.instructions.md` | `**` | hoch |
+| `guides/quality-gates.md` | `quality-gates.instructions.md` | `**` | Template |
 | `concepts/agent-principles.md` | Skill `okf-rules` (Referenz) | — | — |
 
 ## Workflow
 
-1. OKF-Dateien in `okf/` bearbeiten (Source of Truth)
-2. Entsprechende `.apm/instructions/*.instructions.md` synchron halten
-3. `apm install` im Repo oder im Consumer-Projekt ausführen
-4. Optional: projekt-spezifische Erweiterungen als zusätzliche APM-Dependencies
+1. OKF-v0.2-Concept in `okf/` bearbeiten (`type` Pflicht)
+2. `okf/index.md` und `okf/log.md` aktualisieren
+3. Entsprechende `.apm/instructions/` spiegeln
+4. `apm install` ausführen
 
 ## Consumer-Projekt
 
 ```yaml
-# apm.yml im Zielprojekt
 dependencies:
   apm:
     - BigAl42/development-harness#v0.1.0

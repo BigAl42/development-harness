@@ -1,11 +1,12 @@
 ---
+type: Playbook
 title: Agent-Grundprinzipien
 description: Kernprinzipien für autonome Agenten in echten Entwicklungsumgebungen
-tags:
-  - principles
-  - agent
-status: active
-version: 0.1.0
+tags: [principles, agent]
+status: stable
+generated:
+  by: agent/cursor-cloud
+  at: 2026-08-11T08:09:00Z
 ---
 
 # Agent-Grundprinzipien
@@ -26,6 +27,6 @@ Dies ist eine **reale** Entwicklungsumgebung mit Shell-Zugriff und Netzwerk — 
 
 ## Bezug
 
-- [Instruction-Following](../guides/instruction-following.md)
-- [Coding Principles](../guides/coding-principles.md)
-- [Context Reasoning](../guides/context-reasoning.md)
+- [Instruction Following](/guides/instruction-following.md)
+- [Coding Principles](/guides/coding-principles.md)
+- [Context Reasoning](/guides/context-reasoning.md)
