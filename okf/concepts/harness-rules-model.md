@@ -1,7 +1,7 @@
 ---
 type: Reference
-title: Harness Rules — Modell
-description: Was Harness Rules sind, wie sie sich von Projekt-Regeln und Harness-Deploy-Targets unterscheiden
+title: Harness Rules — Model
+description: What harness rules are and how they differ from project rules and deploy targets
 tags: [harness-rules, architecture, okf]
 status: stable
 generated:
@@ -9,57 +9,57 @@ generated:
   at: 2026-08-11T08:20:00Z
 ---
 
-# Harness Rules — Modell
+# Harness Rules — Model
 
-## Drei Ebenen
+## Three layers
 
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  1. Harness Rules (OKF)     okf/harness-rules/*.md      │
-│     Portable, harness-agnostisch, versioniert           │
+│     Portable, harness-agnostic, versioned               │
 │     type: Harness Rule                                  │
 └──────────────────────────┬──────────────────────────────┘
-                           │ abgeleitet / gespiegelt
+                           │ derived / mirrored
 ┌──────────────────────────▼──────────────────────────────┐
 │  2. APM Instructions        .apm/instructions/*.md      │
-│     Deploy-Primitive für alle Harnesses                 │
+│     Deploy primitives for all harnesses                 │
 └──────────────────────────┬──────────────────────────────┘
-                           │ apm install (pro Target)
+                           │ apm install (per target)
 ┌──────────────────────────▼──────────────────────────────┐
-│  3. Harness-Targets (generiert, nicht Source of Truth)   │
+│  3. Harness targets (generated, not source of truth)     │
 │     Cursor:  .cursor/rules/*.mdc                         │
 │     Copilot: .github/instructions/                       │
 │     Agents:  .agents/skills/                             │
 └──────────────────────────────────────────────────────────┘
 ```
 
-## Harness Rule vs. Projekt-Regel
+## Harness rule vs. project rule
 
-| | Harness Rule | Projekt-Regel |
-|---|--------------|---------------|
-| **Gültigkeit** | Übergreifend, alle Projekte | Ein Repo / Domäne |
-| **Ort** | `development-harness/okf/harness-rules/` | Zielprojekt (z. B. `.cursor/rules/`) |
-| **Beispiel** | Coding Principles, Kommunikation | Kassensystem-Views, Tauri-Build |
-| **Distribution** | APM-Package | Lokal im Projekt |
+| | Harness Rule | Project Rule |
+|---|--------------|--------------|
+| **Scope** | Cross-project, all repos | One repo / domain |
+| **Location** | `development-harness/okf/harness-rules/` | Target project (e.g. `.cursor/rules/`) |
+| **Example** | Coding principles, English language | POS views, Tauri build |
+| **Distribution** | APM package | Local in project |
 
-## Harness Rule vs. Cursor Rule
+## Harness rule vs. Cursor rule
 
-Eine **Cursor Rule** (`.mdc`) ist ein **Deploy-Target**, keine Definition.
+A **Cursor rule** (`.mdc`) is a **deploy target**, not the definition.
 
 - Definition: `okf/harness-rules/<name>.md` (OKF v0.2, `type: Harness Rule`)
-- Ableitung: `.apm/instructions/<name>.instructions.md`
-- Deploy: `apm install` schreibt `.cursor/rules/<name>.mdc` (nur wenn Cursor Target aktiv)
+- Derivation: `.apm/instructions/<name>.instructions.md`
+- Deploy: `apm install` writes `.cursor/rules/<name>.mdc` (when Cursor target is active)
 
-**Niemals** Harness Rules direkt als `.cursor/rules/` pflegen — das wäre Harness-spezifisch und nicht portabel.
+**Never** maintain harness rules directly as `.cursor/rules/` — that is harness-specific and not portable.
 
-## Priorität beim Konsum
+## Consumption priority
 
-1. Explizite User-Anweisung
-2. Projekt-Regeln im Ziel-Repo
-3. Harness Rules (dieses Package)
-4. Allgemeine Best Practices
+1. Explicit user instruction
+2. Project rules in the target repo
+3. Harness rules (this package)
+4. General best practices
 
-## Bezug
+## Related
 
 - [Harness Deployment](/reference/harness-deployment.md)
-- [OKF v0.2 anwenden](/guides/okf-v0.2-application.md)
+- [Applying OKF v0.2](/guides/okf-v0.2-application.md)

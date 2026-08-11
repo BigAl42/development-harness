@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
-title: Quality Gates vor Commit
-description: Tests und Builds müssen vor Commit grün sein — Template für Consumer-Anpassung
+title: Quality Gates Before Commit
+description: Tests and builds must pass before commit — template for consumer projects
 tags: [harness-rules, testing, ci, commit]
 status: stable
 generated:
@@ -10,25 +10,25 @@ generated:
 sources:
   - id: event-pos-tests-vor-commit
     resource: /event-pos-desktop/.cursor/rules/tests-vor-commit.mdc
-    title: tests-vor-commit (generalisiert)
+    title: tests-vor-commit (generalized)
 ---
 
-# Quality Gates vor Commit
+# Quality Gates Before Commit
 
-Generalisierte Harness Rule aus event-pos-desktop. **Konkrete Befehle** gehören in Projekt-Regeln des Ziel-Repos.
+Generalized harness rule from event-pos-desktop. **Concrete commands** belong in project rules of the target repo.
 
 ## Tests
 
-Vor Commit alle relevanten Tests erfolgreich. Projekt-Test-Kommando verwenden.
+All relevant tests must pass before commit. Use the project's test command.
 
 ## Build
 
-Produktions-/Release-Build bei build-relevanten Änderungen verifizieren.
+Verify production/release build when changes affect the build.
 
 ## Hooks
 
-Pre-Commit-Hooks respektieren.
+Respect pre-commit hooks.
 
-## Abgrenzung
+## Boundary
 
-Diese Harness Rule definiert das **Prinzip**. Projekt-Regeln (z. B. `npm run test:all`, `npx tauri build`) implementieren es konkret.
+This harness rule defines the **principle**. Project rules (e.g. `npm run test:all`, `npx tauri build`) implement it concretely.

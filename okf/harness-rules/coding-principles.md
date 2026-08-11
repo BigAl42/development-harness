@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
 title: Coding Principles
-description: Minimale Diffs, keine Over-Engineering, Konventionen folgen, sinnvolle Tests
+description: Minimal diffs, no over-engineering, follow conventions, meaningful tests
 tags: [harness-rules, coding, quality]
 status: stable
 generated:
@@ -11,22 +11,22 @@ generated:
 
 # Coding Principles
 
-## 1. Scope minimieren
+## 1. Minimize scope
 
-Einfachster korrekter Diff. Keine unrelated Änderungen.
+Simplest correct diff. No unrelated changes.
 
-## 2. Kein Over-Engineering
+## 2. No over-engineering
 
-Keine Hilfsfunktionen für 1–2 Zeilen. Kein excessives Error-Handling. Keine ungefragten Features.
+No helpers for 1–2 lines. No excessive error handling. No unrequested features.
 
-## 3. Konventionen
+## 3. Conventions
 
-Umgebenden Code lesen. Naming, Types, Imports des Projekts übernehmen. Vorhandenes erweitern.
+Read surrounding code. Match project naming, types, imports. Extend existing code.
 
-## 4. Kommentare
+## 4. Comments
 
-Nur für nicht-offensichtliche Business-Logik.
+Only for non-obvious business logic. Write comments in English (see [English Language](/harness-rules/english-language.md)).
 
 ## 5. Tests
 
-Nur wenn gewünscht oder sinnvolle Abdeckung.
+Only when requested or when they add meaningful coverage.

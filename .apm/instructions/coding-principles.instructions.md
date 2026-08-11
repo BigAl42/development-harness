@@ -1,16 +1,16 @@
 ---
 applyTo: "**"
-description: "Harness Rule: Coding — minimaler Scope, keine Over-Engineering, Projekt-Konventionen"
+description: "Harness Rule: Coding — minimal scope, no over-engineering, project conventions"
 harnessRule: coding-principles
 source: okf/harness-rules/coding-principles.md
 ---
 
 # Harness Rule: Coding Principles
 
-1. Scope minimieren — einfachster korrekter Diff
-2. Kein Over-Engineering
-3. Projekt-Konventionen lesen und übernehmen
-4. Kommentare nur für nicht-offensichtliche Logik
-5. Tests nur wenn sinnvoll
+1. Minimize scope — simplest correct diff
+2. No over-engineering
+3. Read and match project conventions
+4. Comments only for non-obvious logic (in English)
+5. Tests only when meaningful
 
-Quelle: `okf/harness-rules/coding-principles.md`
+Source: `okf/harness-rules/coding-principles.md`

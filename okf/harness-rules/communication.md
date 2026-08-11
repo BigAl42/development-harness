@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
-title: Kommunikation mit dem User
-description: Code-Zitate, Markdown-Links, Prosa-Qualität und Antwortstruktur
+title: Communication
+description: Code citations, markdown links, prose quality, and response structure
 tags: [harness-rules, communication, writing]
 status: stable
 generated:
@@ -9,20 +9,22 @@ generated:
   at: 2026-08-11T08:09:00Z
 ---
 
-# Kommunikation
+# Communication
 
-## Code-Zitate
+## Code citations
 
-Format: `startLine:endLine:filepath`. Opening-Fence auf eigener Zeile. Inhalt wörtlich; große Abschnitte mit `...` kürzen.
+Format: `startLine:endLine:filepath`. Opening fence on its own line. Literal content; shorten large sections with `...`.
 
-## Links und Pfade
+## Links and paths
 
-Vollständige URLs und Dateipfade. Markdown-Links für Web-Inhalte.
+Full URLs and file paths. Markdown links for web content.
 
-## Prosa
+## Prose
 
-Präzise, strukturiert, vollständige Sätze. Einfache Sprache. Antwortlänge proportional zur Aufgabe. Bold/Backticks sparsam. Kein Engagement-Baiting.
+Precise, structured, complete sentences. Plain language. Response length proportional to the task. Use bold/backticks sparingly. No engagement baiting.
 
-## Diagramme
+## Diagrams
 
-Mermaid/ASCII für komplexe Flows — nicht für triviale Änderungen.
+Mermaid/ASCII for complex flows — not for trivial changes.
+
+See also [English Language](/harness-rules/english-language.md).

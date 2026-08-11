@@ -1,37 +1,40 @@
 # development-harness
 
-Portable **Harness Rules** als OKF-v0.2-Bundle + Microsoft APM-Package. Regeln gelten übergreifend für alle Agent-Harnesses — sie sind **nicht** Cursor-Rules, sondern werden daraus (und in Copilot, Claude Code, …) **abgeleitet**.
+Portable **Harness Rules** as an OKF v0.2 bundle + Microsoft APM package. Rules apply across all agent harnesses — they are **not** Cursor rules; they are **derived** into Cursor, Copilot, Claude Code, and others.
 
-## Drei Ebenen
+## Three layers
 
 ```
-okf/harness-rules/     ← Definition (Harness Rule, harness-agnostisch)
+okf/harness-rules/     ← definition (Harness Rule, harness-agnostic)
        ↓
-.apm/instructions/     ← APM deploy-Primitive
+.apm/instructions/     ← APM deploy primitives
        ↓
-.cursor/rules/ etc.     ← generierte Targets (nicht Source of Truth)
+.cursor/rules/ etc.     ← generated targets (not source of truth)
 ```
 
-| Ebene | Was | Committen? |
-|-------|-----|------------|
-| Harness Rules | `okf/harness-rules/*.md` | ja |
-| APM | `.apm/instructions/` | ja |
-| Targets | `.cursor/rules/`, `.agents/skills/` | nein (generiert) |
+| Layer | What | Commit? |
+|-------|------|---------|
+| Harness rules | `okf/harness-rules/*.md` | yes |
+| APM | `.apm/instructions/` | yes |
+| Targets | `.cursor/rules/`, `.agents/skills/` | no (generated) |
 
 Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.md)
 
-## Harness Rules (v0.2.0)
+## Harness rules (v0.3.0)
 
-| Harness Rule | Datei |
-|--------------|-------|
-| Agent-Grundprinzipien | `okf/harness-rules/agent-principles.md` |
+| Harness Rule | File |
+|--------------|------|
+| Agent Principles | `okf/harness-rules/agent-principles.md` |
+| **English Language** | `okf/harness-rules/english-language.md` |
 | Instruction Following | `okf/harness-rules/instruction-following.md` |
-| Kommunikation | `okf/harness-rules/communication.md` |
+| Communication | `okf/harness-rules/communication.md` |
 | Coding Principles | `okf/harness-rules/coding-principles.md` |
 | Context Reasoning | `okf/harness-rules/context-reasoning.md` |
-| Quality Gates (Template) | `okf/harness-rules/quality-gates.md` |
+| Quality Gates (template) | `okf/harness-rules/quality-gates.md` |
 
-**Projekt-Regeln** (z. B. Kassensystem-Views in event-pos-desktop) bleiben im Ziel-Repo und ergänzen die Harness Rules.
+**Project rules** (e.g. POS views in event-pos-desktop) stay in the target repo and complement harness rules.
+
+All documentation in this package is **English**.
 
 ## Setup
 
@@ -40,23 +43,23 @@ curl -sSL https://aka.ms/apm-unix | sh
 apm install
 ```
 
-## Consumer-Projekt
+## Consumer project
 
 ```yaml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.2.0
+    - BigAl42/development-harness#v0.3.0
 ```
 
 ```bash
-apm install   # deployt Harness Rules in erkannte Targets
+apm install   # deploys harness rules to detected targets
 ```
 
-## Pflegen
+## Maintenance
 
-1. Harness Rule in `okf/harness-rules/` bearbeiten (`type: Harness Rule`)
-2. `.apm/instructions/` spiegeln
-3. `apm install` — Targets werden neu generiert
+1. Edit harness rule in `okf/harness-rules/` (`type: Harness Rule`)
+2. Mirror `.apm/instructions/`
+3. Run `apm install` — targets are regenerated
 
 ## Links
 

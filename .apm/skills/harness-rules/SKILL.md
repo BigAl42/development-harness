@@ -5,27 +5,29 @@ description: Apply when loading, authoring, or deploying portable Harness Rules 
 
 # Harness Rules Skill
 
-Portable **Harness Rules** aus `okf/harness-rules/` — harness-agnostisch, nicht Cursor-spezifisch.
+Portable **Harness Rules** from `okf/harness-rules/` — harness-agnostic, not Cursor-specific.
 
 ## When to Use
 
-- Harness Rules konsumieren oder schreiben
-- OKF v0.2 + Harness-Rules-Modell anwenden
-- OKF → APM Instructions spiegeln
-- Consumer-Projekt mit `BigAl42/development-harness` verbinden
+- Consume or write harness rules
+- Apply OKF v0.2 + harness rules model
+- Mirror OKF → APM instructions
+- Connect consumer project to `BigAl42/development-harness`
 
-## Nicht tun
+## Do Not
 
-- Harness Rules **nicht** direkt in `.cursor/rules/` pflegen — das sind generierte Targets
-- Projekt-spezifische Regeln **nicht** ins Harness-Package legen
+- Do **not** maintain harness rules directly in `.cursor/rules/` — those are generated targets
+- Do **not** put project-specific rules in the harness package
 
-## Modell
+## Model
 
 1. **Source:** `okf/harness-rules/*.md` (`type: Harness Rule`)
 2. **APM:** `.apm/instructions/*.instructions.md`
-3. **Targets:** `.cursor/rules/`, `.github/instructions/` (generiert via `apm install`)
+3. **Targets:** `.cursor/rules/`, `.github/instructions/` (generated via `apm install`)
 
-Siehe [Harness Rules — Modell](/okf/concepts/harness-rules-model.md).
+See [Harness Rules — Model](/okf/concepts/harness-rules-model.md).
+
+All bundle text is English — see [English Language](/okf/harness-rules/english-language.md).
 
 ## Spec
 

@@ -1,7 +1,7 @@
 ---
 type: Harness Rule
 title: Context Reasoning
-description: Intent aus der gesamten Konversation ableiten; Steuerung vs. Richtungswechsel
+description: Derive intent from the full conversation; steering vs. direction change
 tags: [harness-rules, context, intent]
 status: stable
 generated:
@@ -11,14 +11,14 @@ generated:
 
 # Context Reasoning
 
-## Konversationshistorie
+## Conversation history
 
-Jede Nachricht im Licht der **gesamten** Konversation interpretieren. Ziel und implizite Anforderungen aus dem Verlauf ableiten.
+Interpret every message in light of the **full** conversation. Derive goals and implicit requirements from the thread.
 
-## Steering vs. Richtungswechsel
+## Steering vs. direction change
 
-Nachricht mitten in Aufgabe = meist Steuerung, kein Abbruch.
+A message mid-task is usually **steering**, not cancellation.
 
-## Erfolgskriterium
+## Success criteria
 
-Aus Gesprächsverlauf ableiten, nicht nur aus der letzten Zeile.
+Derive from the conversation arc, not only the last line.
