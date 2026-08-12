@@ -37,9 +37,9 @@ APM loads instructions by glob. Prefer **narrow** globs for situational rules so
 | Always-on | `**` | English, coding principles, quality-gates template, … |
 | OKF / APM authoring | `okf/**`, `.apm/**` | OKF workflow, OKF v0.2 application |
 | Domain calc | `**/lib/**`, `**/scripts/test-*` | Domain logic first |
-| Sharing / ACL | `**/household*`, `**/acl/**`, `**/invite*` | Sharing privacy |
-| Push / PWA | `**/push*`, `**/service-worker*` | Web push privacy |
-| Mobile UI | `**/*.{tsx,jsx,css}`, `**/layout.*` | Mobile web shell |
+| Sharing / ACL | `**/acl/**`, `**/invite*`, `**/member*`, `**/workspace*` | Sharing privacy |
+| Push / PWA | `**/push*`, `**/service-worker*`, `**/notification*` | Web push privacy |
+| Mobile UI | `**/*.{tsx,jsx,css}`, `**/shell*`, `**/nav*` | Mobile web shell |
 
 Missing `applyTo` folds the instruction into compiled root context (`AGENTS.md`, …) instead of a path-scoped rule file. See [APM instructions docs](https://microsoft.github.io/apm/producer/author-primitives/instructions-and-agents/).
 
@@ -55,7 +55,7 @@ Missing `applyTo` folds the instruction into compiled root context (`AGENTS.md`,
 # apm.yml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.4.1
+    - BigAl42/development-harness#v0.4.2
 ```
 
 ```bash

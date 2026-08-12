@@ -2,6 +2,7 @@
 
 ## 2026-08-12
 
+* **Update**: Genericize situational rules (v0.4.2) — drop project nouns (`household`, `whats-new`, app-specific nav paths) from rule text and `applyTo`
 * **Update**: P0 APM alignment (v0.4.1) — narrow `applyTo` on situational instructions; pin `targets:` in `apm.yml`; document `apm compile --validate`; CI workflow
 * **Creation**: Harness rules extracted from energy-tracker + kredit-tracker (v0.4.0)
   - `okf-knowledge-workflow` — consume/maintain OKF in consumer repos
