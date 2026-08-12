@@ -9,13 +9,13 @@ generated:
   at: 2026-08-12T18:30:00Z
 sources:
   - id: kredit-tracker-membership-acl
-    resource: /kredit-tracker/.cursor/rules/household.mdc
+    resource: kredit-tracker membership ACL project rule
     title: Membership ACL (generalized from project rule)
   - id: kredit-tracker-core-invites
-    resource: /kredit-tracker/.cursor/rules/credit-tracker-core.mdc
+    resource: kredit-tracker core always-on project rule
     title: Invite-only sharing (generalized)
   - id: energy-tracker-membership
-    resource: /energy-tracker/okf/acl/household-membership.md
+    resource: energy-tracker ACL membership concept
     title: Membership / invite-by-identifier (generalized)
 ---
 
