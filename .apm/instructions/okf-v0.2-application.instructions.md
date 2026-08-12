@@ -1,5 +1,5 @@
 ---
-applyTo: "**"
+applyTo: "okf/**,.apm/**,apm.yml"
 description: "OKF v0.2 + Harness Rules: type required, okf/harness-rules/ as source, targets generated only"
 harnessRule: okf-v0.2-application
 source: okf/guides/okf-v0.2-application.md
@@ -22,7 +22,7 @@ source: okf/guides/okf-v0.2-application.md
 
 1. Edit harness rule in `okf/harness-rules/`
 2. Mirror `.apm/instructions/` (`harnessRule` + `source` in frontmatter)
-3. Run `apm install` — targets are generated, not edited manually
+3. Run `apm compile --validate` then `apm install` — targets are generated, not edited manually
 
 Write bundle content in English.
 

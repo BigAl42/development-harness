@@ -75,8 +75,8 @@ Use bundle-relative links: `[Title](/harness-rules/coding-principles.md)`.
 1. Create or edit a **harness rule** in `okf/harness-rules/` (`type: Harness Rule`)
 2. Validate frontmatter — at least `type`; set `generated` for agent-authored content
 3. Update `okf/index.md` and `okf/log.md`
-4. Mirror `.apm/instructions/` (`harnessRule` + `source` in frontmatter)
-5. Run `apm install` — generates harness targets; **do not** edit `.cursor/rules/` manually
+4. Mirror `.apm/instructions/` (`harnessRule` + `source` + scoped `applyTo` in frontmatter)
+5. Run `apm compile --validate`, then `apm install` — generates harness targets; **do not** edit `.cursor/rules/` manually
 
 Write all bundle content in English — see [English Language](/harness-rules/english-language.md).
 

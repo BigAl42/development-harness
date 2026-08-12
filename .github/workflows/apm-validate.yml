@@ -1,0 +1,31 @@
+name: apm-validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install APM CLI
+        run: curl -sSL https://aka.ms/apm-unix | sh
+
+      - name: Validate APM primitives
+        run: |
+          export PATH="/usr/local/bin:$PATH"
+          apm --version
+          apm compile --validate --local-only
+          apm run validate
+
+      - name: Install smoke (cursor,claude,copilot)
+        run: |
+          export PATH="/usr/local/bin:$PATH"
+          apm install -t cursor,claude,copilot
+          test -f .cursor/rules/mobile-web-shell.mdc
+          ls .claude/rules/ | grep -q mobile-web-shell
+          grep -q 'globs:' .cursor/rules/mobile-web-shell.mdc
+          grep -q 'okf' .cursor/rules/okf-knowledge-workflow.mdc

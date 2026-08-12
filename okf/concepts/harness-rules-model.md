@@ -47,8 +47,8 @@ generated:
 A **Cursor rule** (`.mdc`) is a **deploy target**, not the definition.
 
 - Definition: `okf/harness-rules/<name>.md` (OKF v0.2, `type: Harness Rule`)
-- Derivation: `.apm/instructions/<name>.instructions.md`
-- Deploy: `apm install` writes `.cursor/rules/<name>.mdc` (when Cursor target is active)
+- Derivation: `.apm/instructions/<name>.instructions.md` with `applyTo` globs (narrow for situational rules; `**` only for always-on)
+- Deploy: `apm install` writes `.cursor/rules/<name>.mdc` (when Cursor target is active); `apm compile --validate` checks primitives without writing
 
 **Never** maintain harness rules directly as `.cursor/rules/` — that is harness-specific and not portable.
 

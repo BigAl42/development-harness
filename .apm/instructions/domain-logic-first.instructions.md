@@ -1,5 +1,5 @@
 ---
-applyTo: "**"
+applyTo: "**/lib/**,**/src/lib/**,**/scripts/test-*,**/scripts/test-*/**"
 description: "Harness Rule: Pure domain calc without I/O; test metrics before UI; keep parallel modules decoupled"
 harnessRule: domain-logic-first
 source: okf/harness-rules/domain-logic-first.md

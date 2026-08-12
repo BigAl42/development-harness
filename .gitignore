@@ -1,9 +1,23 @@
 # APM package cache
 apm_modules/
 
-# Generierte Harness-Targets (Source of Truth ist okf/harness-rules/)
+# Generated harness targets (source of truth: okf/harness-rules/ + .apm/)
 .cursor/rules/
+.cursor/agents/
 .agents/skills/
+.agents/rules/
+.claude/
+.codex/
+.github/instructions/
+.github/agents/
+.github/copilot-instructions.md
+.windsurf/
+.kiro/
+.grok/
+.opencode/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
 
 # OS
 .DS_Store

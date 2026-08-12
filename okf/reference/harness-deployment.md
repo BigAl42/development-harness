@@ -6,7 +6,7 @@ tags: [harness-rules, apm, deployment]
 status: stable
 generated:
   by: agent/cursor-cloud
-  at: 2026-08-11T08:20:00Z
+  at: 2026-08-12T18:15:00Z
 ---
 
 # Harness Deployment
@@ -28,10 +28,26 @@ generated:
 | `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | `.cursor/rules/mobile-web-shell.mdc` | … |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `.cursor/rules/okf-v0.2-application.mdc` | … |
 
+## `applyTo` scoping (Minimal Context)
+
+APM loads instructions by glob. Prefer **narrow** globs for situational rules so agents only see them when editing matching files.
+
+| Kind | Example `applyTo` | Rules |
+|------|-------------------|-------|
+| Always-on | `**` | English, coding principles, quality-gates template, … |
+| OKF / APM authoring | `okf/**`, `.apm/**` | OKF workflow, OKF v0.2 application |
+| Domain calc | `**/lib/**`, `**/scripts/test-*` | Domain logic first |
+| Sharing / ACL | `**/household*`, `**/acl/**`, `**/invite*` | Sharing privacy |
+| Push / PWA | `**/push*`, `**/service-worker*` | Web push privacy |
+| Mobile UI | `**/*.{tsx,jsx,css}`, `**/layout.*` | Mobile web shell |
+
+Missing `applyTo` folds the instruction into compiled root context (`AGENTS.md`, …) instead of a path-scoped rule file. See [APM instructions docs](https://microsoft.github.io/apm/producer/author-primitives/instructions-and-agents/).
+
 ## Producer repo (development-harness)
 
 - **Commit:** `okf/harness-rules/`, `.apm/instructions/`, `apm.yml`, `apm.lock.yaml`
-- **Do not commit:** `.cursor/rules/`, `.agents/skills/` (generated targets — see `.gitignore`)
+- **Do not commit:** `.cursor/rules/`, `.agents/skills/`, generated `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` (see `.gitignore`)
+- **`targets:`** in `apm.yml` pins compile/install harnesses (avoid machine-dependent auto-detect)
 
 ## Consumer project
 
@@ -39,11 +55,13 @@ generated:
 # apm.yml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.4.0
+    - BigAl42/development-harness#v0.4.1
 ```
 
 ```bash
-apm install    # deploys harness rules to detected targets
+apm install                 # deploys primitives to declared/detected targets
+apm compile                 # writes root context files for non-Copilot harnesses
+apm compile --validate      # CI: frontmatter + structure, no writes
 ```
 
 Project-specific rules stay in the consumer repo and **complement** — not replace — harness rules.
@@ -51,6 +69,7 @@ Project-specific rules stay in the consumer repo and **complement** — not repl
 ## Change workflow
 
 1. Edit harness rule in `okf/harness-rules/`
-2. Mirror `.apm/instructions/` (keep `harnessRule` reference)
-3. Run `apm install` in producer or consumer
-4. Generated targets are recreated — do not edit manually
+2. Mirror `.apm/instructions/` (keep `harnessRule` + `source`; set `applyTo`)
+3. Run `apm compile --validate` (or `apm run validate`)
+4. Run `apm install` in producer or consumer
+5. Generated targets are recreated — do not edit manually
