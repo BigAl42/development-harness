@@ -1,5 +1,5 @@
 ---
-applyTo: "**"
+applyTo: "**/push*,**/push*/**,**/sw*,**/service-worker*,**/service-worker*/**,**/whats-new*,**/notification*"
 description: "Harness Rule: Web Push — no broadcast; preference gates; purge gone endpoints; no VAPID secrets in git"
 harnessRule: web-push-privacy
 source: okf/harness-rules/web-push-privacy.md

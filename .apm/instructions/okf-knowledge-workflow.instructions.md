@@ -1,5 +1,5 @@
 ---
-applyTo: "**"
+applyTo: "okf/**"
 description: "Harness Rule: When okf/ exists — read before structural work; update concepts + log + validate in the same change"
 harnessRule: okf-knowledge-workflow
 source: okf/harness-rules/okf-knowledge-workflow.md

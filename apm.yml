@@ -1,12 +1,21 @@
 name: development-harness
-version: 0.4.0
+version: 0.4.1
 description: Portable Harness Rules (OKF v0.2) and APM primitives for cross-project agent configuration — English
 author: BigAl42
 license: MIT
 includes: auto
+targets:
+  - cursor
+  - claude
+  - copilot
+  - codex
+  - gemini
+  - opencode
+  - windsurf
 
 dependencies:
   apm: []
   mcp: []
 
-scripts: {}
+scripts:
+  validate: apm compile --validate --local-only

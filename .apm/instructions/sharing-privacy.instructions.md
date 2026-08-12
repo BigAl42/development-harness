@@ -1,5 +1,5 @@
 ---
-applyTo: "**"
+applyTo: "**/household*,**/household*/**,**/acl/**,**/invite*,**/members*"
 description: "Harness Rule: Membership-scoped sharing — invite by identifier, never list all accounts"
 harnessRule: sharing-privacy
 source: okf/harness-rules/sharing-privacy.md

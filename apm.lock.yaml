@@ -39,6 +39,240 @@ deployments:
   active_owner: .
   content_hash: sha256:7466b383b8ea371a4dff903d79f789f0342e7094cf07be27cbf3f0eb7b5b82b2
 - kind: project-relative
+  target: claude
+  value: .claude/rules/coding-principles.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:038aea460c4bccce6777e1cc00fa42b5b6a8c0ab9278f6429dbc379d26959314
+- kind: project-relative
+  target: claude
+  value: .claude/rules/communication.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:6cd656eb173fc5442392b0173dd5e64f9f7a265a59990a7508e2ad4b55a0e048
+- kind: project-relative
+  target: claude
+  value: .claude/rules/context-reasoning.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1e8b13b5c3899d35756b2bf4adcf0c654f8ad4a49c944b8d2209c18a51c21388
+- kind: project-relative
+  target: claude
+  value: .claude/rules/domain-logic-first.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:d304c20aac40cf3268d52ddd6f6a6e96935a05a2c042bd07caec5063afd90ce5
+- kind: project-relative
+  target: claude
+  value: .claude/rules/english-language.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:8183d3a71fe7b037dd298bc6082a35ea9ef9ee949e3f000f8764d332a1ecb8d6
+- kind: project-relative
+  target: claude
+  value: .claude/rules/instruction-following.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:9361242ef4c079a407a9c018a303c01456afe94ab2cc8527cd5f3532c10bda0c
+- kind: project-relative
+  target: claude
+  value: .claude/rules/mobile-web-shell.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f0d9fc2f203abec1d1dcf79a04895adcaf1ee502926e7ef4098c0b8507cfcedf
+- kind: project-relative
+  target: claude
+  value: .claude/rules/okf-knowledge-workflow.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f4caa5629408a73e9a90d897b385e39d5ed5abf944fffef19e28157ad3751e1a
+- kind: project-relative
+  target: claude
+  value: .claude/rules/okf-v0.2-application.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:a1d914f525c90bca768e32551f1e11ea2610a94fb7e909fa5fc828555a31d58d
+- kind: project-relative
+  target: claude
+  value: .claude/rules/quality-gates.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:17fb753d18ade61d5b9a63b8186ba1ee639908589f21f659101ae3ddec8b10d1
+- kind: project-relative
+  target: claude
+  value: .claude/rules/sharing-privacy.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e4b901ea259046b631b425acf5c19df26c2e2e8f88be5b2b158b07cf7aa92833
+- kind: project-relative
+  target: claude
+  value: .claude/rules/web-push-privacy.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f46cc06773b157d31edbae7cf5a4078f9e55809c1c66335d6ed7b1cb1285e614
+- kind: project-relative
+  target: claude
+  value: .claude/skills/harness-rules
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/harness-rules/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2c96655da6a09c79b7848c0acde63cd22f251d5ce63daa044d931c90d6db82cd
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/coding-principles.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bcd621abf78efc3ab92cfff69111345edb1cb22fe986cb951a6c503341d1af2c
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/communication.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:29272607da6e66ed91f356aaced6daff5e728a033ba79b6ac02133557955f684
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/context-reasoning.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:5788e239b182a94505d1abe663d5560d2c79c476ed3dc22b76c3e7cd008c5a95
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/domain-logic-first.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:f69a29aec939c3ef5a48ee97d3610cb8c1f625bab0321a30e006ade7b5945216
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/english-language.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:caf7e405c5a53a84b6c51a6d71560470579aa680a95cc0d552df4f0653af4daf
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/instruction-following.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:cf535275f3c08338fbc85b14d6bbc731600513c15b7bfe003b138a743717885b
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/mobile-web-shell.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:e77eb8253cb93efd61578693a0543107d095b148a41226b6a563c66a0bc1fec0
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/okf-knowledge-workflow.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:94b1102c229095c2c28d3f205478a46af9ecef1bb5098854dd6b9584d5745407
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/okf-v0.2-application.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:6eb1d14887dc90699b08ce8a6ebb4c716a0be922e0e96b5e4686aed7bd947434
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/quality-gates.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:4e1d726a325cdd9bb6d8b1ae0172bc987601b0c80a44d714326a260f3c539c78
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/sharing-privacy.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1665b65118c0645c39f20cfc862a096fa07725607904e35f99277160ca9574c2
+- kind: project-relative
+  target: copilot
+  value: .github/instructions/web-push-privacy.instructions.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:8c6b2b861b49f94fbdd9923c3ccb8d62fabe12e575efd3f8ee26263bba6577c4
+- kind: project-relative
   target: cursor
   value: .cursor/rules/coding-principles.mdc
   runtime: null
@@ -67,6 +301,15 @@ deployments:
   content_hash: sha256:046ff66aee22e08591b40af154fc9b624517dde962339cda3355e021b2bb6cf0
 - kind: project-relative
   target: cursor
+  value: .cursor/rules/domain-logic-first.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:08a8f70f92935cbdedaafed20c5f17c926ac21dae763ce292738a445a8f66785
+- kind: project-relative
+  target: cursor
   value: .cursor/rules/english-language.mdc
   runtime: null
   scope: project
@@ -85,13 +328,31 @@ deployments:
   content_hash: sha256:0e0d655befbb86708ebda03ddd45cec50b63f7478ce49f06fb29a03327ed3771
 - kind: project-relative
   target: cursor
+  value: .cursor/rules/mobile-web-shell.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:66576cb4644f8ac212611df1cabc87c850592f09efdbb947fae01e8476177f02
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/okf-knowledge-workflow.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2d10e17a88bd33e2896568b1427d07735439388c85aad3bc0606960dc0edd6a0
+- kind: project-relative
+  target: cursor
   value: .cursor/rules/okf-v0.2-application.mdc
   runtime: null
   scope: project
   owners:
   - .
   active_owner: .
-  content_hash: sha256:5cf51c9d8574e171852e042ea898bcfa937e535855a5b0fd3b94173d94d6e7ed
+  content_hash: sha256:94f1013ee048ebd4a4014be0523233ede2cda132f60e1ccfb166ea69fb74959e
 - kind: project-relative
   target: cursor
   value: .cursor/rules/quality-gates.mdc
@@ -101,25 +362,236 @@ deployments:
   - .
   active_owner: .
   content_hash: sha256:6f0507a05a27961ce36401d69218140a1919777056c5ea186c160c7a262be6a1
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/sharing-privacy.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1c403d978e22f272929a10a342db0b8b6875f498784309358e586b8a9e2ef588
+- kind: project-relative
+  target: cursor
+  value: .cursor/rules/web-push-privacy.mdc
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:bb68af5bd1f9a069420ad99ee4eda3078256ec4e0b474ed59e552b5d432a4c94
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/coding-principles.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:dbdbe8e39c13276f2fadfd57e89818b797ca2caccdfb076b9f504d1ea04a6c7e
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/communication.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:0bc4be9c22c0886317a53c743cd177e9e11a462b1f453314c161c0d620f9ac09
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/context-reasoning.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2a948e762fdaa5d1567bc7b250d31246fd727c7e531575ce6bd5090e96888fca
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/domain-logic-first.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:01ce4c852bf70d8206c98023bbba170527688cf0557933577809ec8b07276934
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/english-language.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:1c41c45fd2b780a778a63844f4d9a205730736d22b5f9d3ba4817157c03c4fa3
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/instruction-following.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:a4ea6fe20fbcf0605374060c7ec3a72cce2f78aaa6ef3b3588ed52240df6ad47
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/mobile-web-shell.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:2a769a46451150a73ad9458efcb69191f2fdbc26a7f3a52e5e10f0f66d7dc0b2
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/okf-knowledge-workflow.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:489563ecabec2139e87227ea333c2ee7823dd021fc6e50a239d8332faa4f04ab
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/okf-v0.2-application.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:ee60870b9c05b4c2f5d20b577e559ce80bb4ad29ea62925857fa648e7e5eaf3f
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/quality-gates.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:21ba5b658de202d889168bd85cc156f227e740f47beafc27b87afd0d97c219a1
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/sharing-privacy.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:5bc7ca75e0bef45167bd0ff3ffc9a84b3b114a8be6828d7111c9dff8df63efc9
+- kind: project-relative
+  target: windsurf
+  value: .windsurf/rules/web-push-privacy.md
+  runtime: null
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: sha256:47dfab392ca58ea25f0d3f2eefdb27f7962f71b5abdf59105404cd519a05ce79
 local_deployed_files:
 - .agents/skills/harness-rules
 - .agents/skills/harness-rules/SKILL.md
 - .agents/skills/okf-rules
 - .agents/skills/okf-rules/SKILL.md
+- .claude/rules/coding-principles.md
+- .claude/rules/communication.md
+- .claude/rules/context-reasoning.md
+- .claude/rules/domain-logic-first.md
+- .claude/rules/english-language.md
+- .claude/rules/instruction-following.md
+- .claude/rules/mobile-web-shell.md
+- .claude/rules/okf-knowledge-workflow.md
+- .claude/rules/okf-v0.2-application.md
+- .claude/rules/quality-gates.md
+- .claude/rules/sharing-privacy.md
+- .claude/rules/web-push-privacy.md
+- .claude/skills/harness-rules
+- .claude/skills/harness-rules/SKILL.md
 - .cursor/rules/coding-principles.mdc
 - .cursor/rules/communication.mdc
 - .cursor/rules/context-reasoning.mdc
+- .cursor/rules/domain-logic-first.mdc
 - .cursor/rules/english-language.mdc
 - .cursor/rules/instruction-following.mdc
+- .cursor/rules/mobile-web-shell.mdc
+- .cursor/rules/okf-knowledge-workflow.mdc
 - .cursor/rules/okf-v0.2-application.mdc
 - .cursor/rules/quality-gates.mdc
+- .cursor/rules/sharing-privacy.mdc
+- .cursor/rules/web-push-privacy.mdc
+- .github/instructions/coding-principles.instructions.md
+- .github/instructions/communication.instructions.md
+- .github/instructions/context-reasoning.instructions.md
+- .github/instructions/domain-logic-first.instructions.md
+- .github/instructions/english-language.instructions.md
+- .github/instructions/instruction-following.instructions.md
+- .github/instructions/mobile-web-shell.instructions.md
+- .github/instructions/okf-knowledge-workflow.instructions.md
+- .github/instructions/okf-v0.2-application.instructions.md
+- .github/instructions/quality-gates.instructions.md
+- .github/instructions/sharing-privacy.instructions.md
+- .github/instructions/web-push-privacy.instructions.md
+- .windsurf/rules/coding-principles.md
+- .windsurf/rules/communication.md
+- .windsurf/rules/context-reasoning.md
+- .windsurf/rules/domain-logic-first.md
+- .windsurf/rules/english-language.md
+- .windsurf/rules/instruction-following.md
+- .windsurf/rules/mobile-web-shell.md
+- .windsurf/rules/okf-knowledge-workflow.md
+- .windsurf/rules/okf-v0.2-application.md
+- .windsurf/rules/quality-gates.md
+- .windsurf/rules/sharing-privacy.md
+- .windsurf/rules/web-push-privacy.md
 local_deployed_file_hashes:
   .agents/skills/harness-rules/SKILL.md: sha256:2c96655da6a09c79b7848c0acde63cd22f251d5ce63daa044d931c90d6db82cd
   .agents/skills/okf-rules/SKILL.md: sha256:7466b383b8ea371a4dff903d79f789f0342e7094cf07be27cbf3f0eb7b5b82b2
+  .claude/rules/coding-principles.md: sha256:038aea460c4bccce6777e1cc00fa42b5b6a8c0ab9278f6429dbc379d26959314
+  .claude/rules/communication.md: sha256:6cd656eb173fc5442392b0173dd5e64f9f7a265a59990a7508e2ad4b55a0e048
+  .claude/rules/context-reasoning.md: sha256:1e8b13b5c3899d35756b2bf4adcf0c654f8ad4a49c944b8d2209c18a51c21388
+  .claude/rules/domain-logic-first.md: sha256:d304c20aac40cf3268d52ddd6f6a6e96935a05a2c042bd07caec5063afd90ce5
+  .claude/rules/english-language.md: sha256:8183d3a71fe7b037dd298bc6082a35ea9ef9ee949e3f000f8764d332a1ecb8d6
+  .claude/rules/instruction-following.md: sha256:9361242ef4c079a407a9c018a303c01456afe94ab2cc8527cd5f3532c10bda0c
+  .claude/rules/mobile-web-shell.md: sha256:f0d9fc2f203abec1d1dcf79a04895adcaf1ee502926e7ef4098c0b8507cfcedf
+  .claude/rules/okf-knowledge-workflow.md: sha256:f4caa5629408a73e9a90d897b385e39d5ed5abf944fffef19e28157ad3751e1a
+  .claude/rules/okf-v0.2-application.md: sha256:a1d914f525c90bca768e32551f1e11ea2610a94fb7e909fa5fc828555a31d58d
+  .claude/rules/quality-gates.md: sha256:17fb753d18ade61d5b9a63b8186ba1ee639908589f21f659101ae3ddec8b10d1
+  .claude/rules/sharing-privacy.md: sha256:e4b901ea259046b631b425acf5c19df26c2e2e8f88be5b2b158b07cf7aa92833
+  .claude/rules/web-push-privacy.md: sha256:f46cc06773b157d31edbae7cf5a4078f9e55809c1c66335d6ed7b1cb1285e614
+  .claude/skills/harness-rules/SKILL.md: sha256:2c96655da6a09c79b7848c0acde63cd22f251d5ce63daa044d931c90d6db82cd
   .cursor/rules/coding-principles.mdc: sha256:aab4366e95e455f1613406a3ea8a473d8d8a766ed7dbf5c55043b3262976401b
   .cursor/rules/communication.mdc: sha256:74918c491fb7821835eaa6564bf858c05a5b1b72564e3c03ce0080c5ea84aed2
   .cursor/rules/context-reasoning.mdc: sha256:046ff66aee22e08591b40af154fc9b624517dde962339cda3355e021b2bb6cf0
+  .cursor/rules/domain-logic-first.mdc: sha256:08a8f70f92935cbdedaafed20c5f17c926ac21dae763ce292738a445a8f66785
   .cursor/rules/english-language.mdc: sha256:bac917f3fe53afdfed56004a4d288f732cb5a1b448c62c240c40fdb6850a1391
   .cursor/rules/instruction-following.mdc: sha256:0e0d655befbb86708ebda03ddd45cec50b63f7478ce49f06fb29a03327ed3771
-  .cursor/rules/okf-v0.2-application.mdc: sha256:5cf51c9d8574e171852e042ea898bcfa937e535855a5b0fd3b94173d94d6e7ed
+  .cursor/rules/mobile-web-shell.mdc: sha256:66576cb4644f8ac212611df1cabc87c850592f09efdbb947fae01e8476177f02
+  .cursor/rules/okf-knowledge-workflow.mdc: sha256:2d10e17a88bd33e2896568b1427d07735439388c85aad3bc0606960dc0edd6a0
+  .cursor/rules/okf-v0.2-application.mdc: sha256:94f1013ee048ebd4a4014be0523233ede2cda132f60e1ccfb166ea69fb74959e
   .cursor/rules/quality-gates.mdc: sha256:6f0507a05a27961ce36401d69218140a1919777056c5ea186c160c7a262be6a1
+  .cursor/rules/sharing-privacy.mdc: sha256:1c403d978e22f272929a10a342db0b8b6875f498784309358e586b8a9e2ef588
+  .cursor/rules/web-push-privacy.mdc: sha256:bb68af5bd1f9a069420ad99ee4eda3078256ec4e0b474ed59e552b5d432a4c94
+  .github/instructions/coding-principles.instructions.md: sha256:bcd621abf78efc3ab92cfff69111345edb1cb22fe986cb951a6c503341d1af2c
+  .github/instructions/communication.instructions.md: sha256:29272607da6e66ed91f356aaced6daff5e728a033ba79b6ac02133557955f684
+  .github/instructions/context-reasoning.instructions.md: sha256:5788e239b182a94505d1abe663d5560d2c79c476ed3dc22b76c3e7cd008c5a95
+  .github/instructions/domain-logic-first.instructions.md: sha256:f69a29aec939c3ef5a48ee97d3610cb8c1f625bab0321a30e006ade7b5945216
+  .github/instructions/english-language.instructions.md: sha256:caf7e405c5a53a84b6c51a6d71560470579aa680a95cc0d552df4f0653af4daf
+  .github/instructions/instruction-following.instructions.md: sha256:cf535275f3c08338fbc85b14d6bbc731600513c15b7bfe003b138a743717885b
+  .github/instructions/mobile-web-shell.instructions.md: sha256:e77eb8253cb93efd61578693a0543107d095b148a41226b6a563c66a0bc1fec0
+  .github/instructions/okf-knowledge-workflow.instructions.md: sha256:94b1102c229095c2c28d3f205478a46af9ecef1bb5098854dd6b9584d5745407
+  .github/instructions/okf-v0.2-application.instructions.md: sha256:6eb1d14887dc90699b08ce8a6ebb4c716a0be922e0e96b5e4686aed7bd947434
+  .github/instructions/quality-gates.instructions.md: sha256:4e1d726a325cdd9bb6d8b1ae0172bc987601b0c80a44d714326a260f3c539c78
+  .github/instructions/sharing-privacy.instructions.md: sha256:1665b65118c0645c39f20cfc862a096fa07725607904e35f99277160ca9574c2
+  .github/instructions/web-push-privacy.instructions.md: sha256:8c6b2b861b49f94fbdd9923c3ccb8d62fabe12e575efd3f8ee26263bba6577c4
+  .windsurf/rules/coding-principles.md: sha256:dbdbe8e39c13276f2fadfd57e89818b797ca2caccdfb076b9f504d1ea04a6c7e
+  .windsurf/rules/communication.md: sha256:0bc4be9c22c0886317a53c743cd177e9e11a462b1f453314c161c0d620f9ac09
+  .windsurf/rules/context-reasoning.md: sha256:2a948e762fdaa5d1567bc7b250d31246fd727c7e531575ce6bd5090e96888fca
+  .windsurf/rules/domain-logic-first.md: sha256:01ce4c852bf70d8206c98023bbba170527688cf0557933577809ec8b07276934
+  .windsurf/rules/english-language.md: sha256:1c41c45fd2b780a778a63844f4d9a205730736d22b5f9d3ba4817157c03c4fa3
+  .windsurf/rules/instruction-following.md: sha256:a4ea6fe20fbcf0605374060c7ec3a72cce2f78aaa6ef3b3588ed52240df6ad47
+  .windsurf/rules/mobile-web-shell.md: sha256:2a769a46451150a73ad9458efcb69191f2fdbc26a7f3a52e5e10f0f66d7dc0b2
+  .windsurf/rules/okf-knowledge-workflow.md: sha256:489563ecabec2139e87227ea333c2ee7823dd021fc6e50a239d8332faa4f04ab
+  .windsurf/rules/okf-v0.2-application.md: sha256:ee60870b9c05b4c2f5d20b577e559ce80bb4ad29ea62925857fa648e7e5eaf3f
+  .windsurf/rules/quality-gates.md: sha256:21ba5b658de202d889168bd85cc156f227e740f47beafc27b87afd0d97c219a1
+  .windsurf/rules/sharing-privacy.md: sha256:5bc7ca75e0bef45167bd0ff3ffc9a84b3b114a8be6828d7111c9dff8df63efc9
+  .windsurf/rules/web-push-privacy.md: sha256:47dfab392ca58ea25f0d3f2eefdb27f7962f71b5abdf59105404cd519a05ce79
