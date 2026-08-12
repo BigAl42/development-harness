@@ -39,7 +39,7 @@ generated:
 |---|--------------|--------------|
 | **Scope** | Cross-project, all repos | One repo / domain |
 | **Location** | `development-harness/okf/harness-rules/` | Target project (e.g. `.cursor/rules/`) |
-| **Example** | Coding principles, English language | POS views, Tauri build |
+| **Example** | Coding principles, OKF workflow, sharing privacy | POS views, Tauri build, loan calc paths |
 | **Distribution** | APM package | Local in project |
 
 ## Harness rule vs. Cursor rule

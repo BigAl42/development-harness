@@ -20,7 +20,7 @@ okf/harness-rules/     ← definition (Harness Rule, harness-agnostic)
 
 Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.md)
 
-## Harness rules (v0.3.0)
+## Harness rules (v0.4.0)
 
 | Harness Rule | File |
 |--------------|------|
@@ -31,8 +31,13 @@ Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.
 | Coding Principles | `okf/harness-rules/coding-principles.md` |
 | Context Reasoning | `okf/harness-rules/context-reasoning.md` |
 | Quality Gates (template) | `okf/harness-rules/quality-gates.md` |
+| OKF Knowledge Workflow | `okf/harness-rules/okf-knowledge-workflow.md` |
+| Domain Logic First | `okf/harness-rules/domain-logic-first.md` |
+| Sharing Privacy | `okf/harness-rules/sharing-privacy.md` |
+| Web Push Privacy | `okf/harness-rules/web-push-privacy.md` |
+| Mobile Web Shell | `okf/harness-rules/mobile-web-shell.md` |
 
-**Project rules** (e.g. POS views in event-pos-desktop) stay in the target repo and complement harness rules.
+**Project rules** (e.g. POS views, loan/Vorsorge paths, PocketBase collections) stay in the target repo and complement harness rules.
 
 All documentation in this package is **English**.
 
@@ -48,7 +53,7 @@ apm install
 ```yaml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.3.0
+    - BigAl42/development-harness#v0.4.0
 ```
 
 ```bash

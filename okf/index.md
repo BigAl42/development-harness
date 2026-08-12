@@ -19,6 +19,11 @@ Portable **Harness Rules** as an OKF v0.2 bundle. APM derives instructions and d
 * [Coding Principles](harness-rules/coding-principles.md) - Scope, conventions, tests
 * [Context Reasoning](harness-rules/context-reasoning.md) - Intent from conversation history
 * [Quality Gates](harness-rules/quality-gates.md) - Tests/build before commit (template)
+* [OKF Knowledge Workflow](harness-rules/okf-knowledge-workflow.md) - Consume/maintain `okf/` in consumer repos
+* [Domain Logic First](harness-rules/domain-logic-first.md) - Pure calc, metrics before UI, module isolation
+* [Sharing Privacy](harness-rules/sharing-privacy.md) - Membership-scoped share, invite-only
+* [Web Push Privacy](harness-rules/web-push-privacy.md) - No broadcast push; secrets hygiene
+* [Mobile Web Shell](harness-rules/mobile-web-shell.md) - Portals, safe areas, touch/input defaults
 
 # Guides
 
