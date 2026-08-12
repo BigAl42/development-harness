@@ -1,5 +1,5 @@
 ---
-applyTo: "**/*.{tsx,jsx,css},**/layout.*,**/globals.css,**/app-nav*,**/app-header*"
+applyTo: "**/*.{tsx,jsx,css,scss},**/layout.*,**/shell*,**/nav*,**/header*,**/tabbar*,**/tab-bar*"
 description: "Harness Rule: Mobile web/PWA shell — portals for fixed overlays, safe areas, touch/input defaults"
 harnessRule: mobile-web-shell
 source: okf/harness-rules/mobile-web-shell.md

@@ -20,7 +20,7 @@ okf/harness-rules/     ← definition (Harness Rule, harness-agnostic)
 
 Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.md)
 
-## Harness rules (v0.4.1)
+## Harness rules (v0.4.2)
 
 | Harness Rule | File | APM `applyTo` |
 |--------------|------|---------------|
@@ -33,11 +33,11 @@ Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.
 | Quality Gates (template) | `okf/harness-rules/quality-gates.md` | `**` |
 | OKF Knowledge Workflow | `okf/harness-rules/okf-knowledge-workflow.md` | `okf/**` |
 | Domain Logic First | `okf/harness-rules/domain-logic-first.md` | `**/lib/**`, scripts tests |
-| Sharing Privacy | `okf/harness-rules/sharing-privacy.md` | household / acl / invite |
+| Sharing Privacy | `okf/harness-rules/sharing-privacy.md` | acl / invite / membership |
 | Web Push Privacy | `okf/harness-rules/web-push-privacy.md` | push / SW / notifications |
-| Mobile Web Shell | `okf/harness-rules/mobile-web-shell.md` | tsx/jsx/css / layout |
+| Mobile Web Shell | `okf/harness-rules/mobile-web-shell.md` | tsx/jsx/css / shell / nav |
 
-**Project rules** (e.g. POS views, loan/Vorsorge paths, PocketBase collections) stay in the target repo and complement harness rules.
+**Project rules** (domain modules, stack-specific paths, collection names) stay in the target repo and complement harness rules.
 
 All documentation in this package is **English**.
 
@@ -56,7 +56,7 @@ Pinned harnesses for this package (see `targets:` in `apm.yml`): Cursor, Claude,
 ```yaml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.4.1
+    - BigAl42/development-harness#v0.4.2
 ```
 
 ```bash

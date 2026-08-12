@@ -23,8 +23,8 @@ Harness rules live in `okf/harness-rules/`. APM instructions are the deployable 
 | `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | quality-gates | `**` |
 | `harness-rules/okf-knowledge-workflow.md` | `okf-knowledge-workflow.instructions.md` | okf-knowledge-workflow | `okf/**` |
 | `harness-rules/domain-logic-first.md` | `domain-logic-first.instructions.md` | domain-logic-first | lib + test scripts |
-| `harness-rules/sharing-privacy.md` | `sharing-privacy.instructions.md` | sharing-privacy | household / acl / invite |
+| `harness-rules/sharing-privacy.md` | `sharing-privacy.instructions.md` | sharing-privacy | acl / invite / membership |
 | `harness-rules/web-push-privacy.md` | `web-push-privacy.instructions.md` | web-push-privacy | push / SW / notifications |
-| `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | mobile-web-shell | tsx/jsx/css / layout |
+| `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | mobile-web-shell | tsx/jsx/css / shell / nav |
 | `harness-rules/agent-principles.md` | Skill `harness-rules` (reference) | agent-principles | — |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application | `okf/**`, `.apm/**`, `apm.yml` |

@@ -1,12 +1,12 @@
 ---
 type: Harness Rule
 title: Web Push Privacy
-description: No broadcast push; preference gates; purge gone endpoints; never commit VAPID secrets
+description: No broadcast push; preference gates; purge gone endpoints; never commit push signing secrets
 tags: [harness-rules, push, pwa, privacy, secrets]
 status: stable
 generated:
   by: agent/cursor
-  at: 2026-08-12T05:45:00Z
+  at: 2026-08-12T18:30:00Z
 sources:
   - id: energy-tracker-agents-push
     resource: /energy-tracker/AGENTS.md
@@ -37,8 +37,8 @@ If the product supports export or account deletion, include push subscriptions a
 
 ## Secrets
 
-Never commit VAPID private keys, `.env` secrets, or equivalent credentials.
+Never commit push signing private keys (e.g. VAPID), `.env` secrets, or equivalent credentials.
 
 ## Boundary
 
-Concrete helpers (`sendPushToUser`, cron vs one-shot jobs, `WHATS_NEW` arrays) stay in project rules.
+Concrete send helpers, job schedules, and feature-announcement catalogs stay in project rules.
