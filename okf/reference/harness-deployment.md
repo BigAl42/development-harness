@@ -21,6 +21,11 @@ generated:
 | `harness-rules/coding-principles.md` | `coding-principles.instructions.md` | `.cursor/rules/coding-principles.mdc` | … |
 | `harness-rules/context-reasoning.md` | `context-reasoning.instructions.md` | `.cursor/rules/context-reasoning.mdc` | … |
 | `harness-rules/quality-gates.md` | `quality-gates.instructions.md` | `.cursor/rules/quality-gates.mdc` | … |
+| `harness-rules/okf-knowledge-workflow.md` | `okf-knowledge-workflow.instructions.md` | `.cursor/rules/okf-knowledge-workflow.mdc` | … |
+| `harness-rules/domain-logic-first.md` | `domain-logic-first.instructions.md` | `.cursor/rules/domain-logic-first.mdc` | … |
+| `harness-rules/sharing-privacy.md` | `sharing-privacy.instructions.md` | `.cursor/rules/sharing-privacy.mdc` | … |
+| `harness-rules/web-push-privacy.md` | `web-push-privacy.instructions.md` | `.cursor/rules/web-push-privacy.mdc` | … |
+| `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | `.cursor/rules/mobile-web-shell.mdc` | … |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `.cursor/rules/okf-v0.2-application.mdc` | … |
 
 ## Producer repo (development-harness)
@@ -34,7 +39,7 @@ generated:
 # apm.yml
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.3.0
+    - BigAl42/development-harness#v0.4.0
 ```
 
 ```bash
