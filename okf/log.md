@@ -2,6 +2,7 @@
 
 ## 2026-08-16
 
+* **Update**: Floating git tag `latest` points at newest release; document pin vs latest
 * **Creation**: DESIGN.md harness rule, playbook, and skill `authoring-design-md` (v0.6.0) — Google Labs design.md format for consumer UI identity
 * **Update**: Consumer integration playbook/skill mention DESIGN.md; pin docs to v0.6.0
 * **Creation**: Consumer integration playbook + skill `integrating-development-harness` (v0.5.0)

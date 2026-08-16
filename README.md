@@ -73,7 +73,8 @@ targets:
   - cursor
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.6.0
+    - BigAl42/development-harness#v0.6.0   # preferred: pin a release
+    # - BigAl42/development-harness#latest  # floating tip (moves on each release)
   mcp: []
 ```
 
@@ -91,6 +92,7 @@ UI consumers: add repo-root `DESIGN.md` ([Google Labs format](https://github.com
 2. Mirror `.apm/instructions/` — set a **narrow `applyTo`** for situational rules; keep `**` only for always-on principles
 3. Run `apm compile --validate` (or `apm run validate`)
 4. Run `apm install` — targets are regenerated
+5. After merging a version bump: tag `vX.Y.Z`, then move floating `latest` to the same commit (`git tag -f -a latest <commit> -m "…" && git push -f origin latest`)
 
 ## Links
 
