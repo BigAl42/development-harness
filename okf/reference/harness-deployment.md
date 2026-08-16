@@ -27,6 +27,7 @@ generated:
 | `harness-rules/web-push-privacy.md` | `web-push-privacy.instructions.md` | `.cursor/rules/web-push-privacy.mdc` | … |
 | `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | `.cursor/rules/mobile-web-shell.mdc` | … |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `.cursor/rules/okf-v0.2-application.mdc` | … |
+| `guides/consumer-integration.md` | `consumer-integration.instructions.md` | `.cursor/rules/consumer-integration.mdc` | … |
 
 ## `applyTo` scoping (Minimal Context)
 
@@ -45,17 +46,24 @@ Missing `applyTo` folds the instruction into compiled root context (`AGENTS.md`,
 
 ## Producer repo (development-harness)
 
-- **Commit:** `okf/harness-rules/`, `.apm/instructions/`, `apm.yml`, `apm.lock.yaml`
+- **Commit:** `okf/harness-rules/`, `okf/guides/`, `.apm/instructions/`, `.apm/skills/`, `apm.yml`, `apm.lock.yaml`
 - **Do not commit:** `.cursor/rules/`, `.agents/skills/`, generated `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` (see `.gitignore`)
 - **`targets:`** in `apm.yml` pins compile/install harnesses (avoid machine-dependent auto-detect)
 
 ## Consumer project
 
+Prefer [Consumer Integration](/guides/consumer-integration.md) and skill `integrating-development-harness`.
+
 ```yaml
 # apm.yml
+name: my-app
+version: 0.0.0
+targets:
+  - cursor
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.4.2
+    - BigAl42/development-harness#v0.5.0
+  mcp: []
 ```
 
 ```bash

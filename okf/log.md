@@ -1,5 +1,10 @@
 # Directory Update Log
 
+## 2026-08-16
+
+* **Creation**: Consumer integration playbook + skill `integrating-development-harness` (v0.5.0)
+* **Update**: APM instruction mirror, index, README, mapping
+
 ## 2026-08-12
 
 * **Update**: Genericize situational rules (v0.4.2) — drop project nouns (`household`, `whats-new`, app-specific nav paths) from rule text and `applyTo`

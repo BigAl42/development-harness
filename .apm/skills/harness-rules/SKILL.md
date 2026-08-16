@@ -12,7 +12,8 @@ Portable **Harness Rules** from `okf/harness-rules/` — harness-agnostic, not C
 - Consume or write harness rules
 - Apply OKF v0.2 + harness rules model
 - Mirror OKF → APM instructions
-- Connect consumer project to `BigAl42/development-harness`
+
+To **add this package to another repo**, use skill `integrating-development-harness` and playbook [Consumer Integration](/okf/guides/consumer-integration.md).
 
 ## Do Not
 
