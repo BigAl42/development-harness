@@ -26,8 +26,10 @@ generated:
 | `harness-rules/sharing-privacy.md` | `sharing-privacy.instructions.md` | `.cursor/rules/sharing-privacy.mdc` | … |
 | `harness-rules/web-push-privacy.md` | `web-push-privacy.instructions.md` | `.cursor/rules/web-push-privacy.mdc` | … |
 | `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | `.cursor/rules/mobile-web-shell.mdc` | … |
+| `harness-rules/design-md.md` | `design-md.instructions.md` | `.cursor/rules/design-md.mdc` | … |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | `.cursor/rules/okf-v0.2-application.mdc` | … |
 | `guides/consumer-integration.md` | `consumer-integration.instructions.md` | `.cursor/rules/consumer-integration.mdc` | … |
+| `guides/design-md-application.md` | `design-md-application.instructions.md` | `.cursor/rules/design-md-application.mdc` | … |
 
 ## `applyTo` scoping (Minimal Context)
 
@@ -41,6 +43,7 @@ APM loads instructions by glob. Prefer **narrow** globs for situational rules so
 | Sharing / ACL | `**/acl/**`, `**/invite*`, `**/member*`, `**/workspace*` | Sharing privacy |
 | Push / PWA | `**/push*`, `**/service-worker*`, `**/notification*` | Web push privacy |
 | Mobile UI | `**/*.{tsx,jsx,css}`, `**/shell*`, `**/nav*` | Mobile web shell |
+| Visual identity | `DESIGN.md`, UI/CSS/theme globs | DESIGN.md rule + playbook |
 
 Missing `applyTo` folds the instruction into compiled root context (`AGENTS.md`, …) instead of a path-scoped rule file. See [APM instructions docs](https://microsoft.github.io/apm/producer/author-primitives/instructions-and-agents/).
 
@@ -62,7 +65,7 @@ targets:
   - cursor
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.5.0
+    - BigAl42/development-harness#v0.6.0
   mcp: []
 ```
 
@@ -71,6 +74,8 @@ apm install                 # deploys primitives to declared/detected targets
 apm compile                 # writes root context files for non-Copilot harnesses
 apm compile --validate      # CI: frontmatter + structure, no writes
 ```
+
+UI consumers also maintain root `DESIGN.md` — see [Applying DESIGN.md](/guides/design-md-application.md).
 
 Project-specific rules stay in the consumer repo and **complement** — not replace — harness rules.
 

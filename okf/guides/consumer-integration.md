@@ -28,7 +28,7 @@ curl -sSL https://aka.ms/apm-unix | sh   # if APM CLI missing
 Pin a released tag (never `main` for consumers):
 
 ```text
-BigAl42/development-harness#v0.5.0
+BigAl42/development-harness#v0.6.0
 ```
 
 ## Minimal `apm.yml` (Cursor-only)
@@ -42,7 +42,7 @@ targets:
   - cursor
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.5.0
+    - BigAl42/development-harness#v0.6.0
   mcp: []
 ```
 
@@ -87,6 +87,7 @@ After install, compare local `.cursor/rules/` and `AGENTS.md` to harness rules.
 - Web push privacy (no broadcast; prefs; gone endpoints; no secrets)  
 - Mobile web shell (portals; safe areas; ≥16px inputs; ~44px targets)  
 - Domain-logic-first (pure calc; metrics before UI)
+- DESIGN.md **workflow** (keep the product’s own `DESIGN.md` tokens locally)
 
 **Keep** locally:
 
@@ -95,6 +96,13 @@ After install, compare local `.cursor/rules/` and `AGENTS.md` to harness rules.
 - Concrete quality-gate **commands** (`npm test`, `npx tsc --noEmit`, `npm run test:okf`, …)  
 - Domain module boundaries with real file globs  
 - Product priority and deploy/git conventions for this repo  
+- Root **`DESIGN.md`** visual identity (create via skill `authoring-design-md` if UI product and missing)
+
+## DESIGN.md in the consumer
+
+- UI products should have a repo-root `DESIGN.md` per [Applying DESIGN.md](/guides/design-md-application.md)  
+- After harness install, the `design-md` rule expects agents to read/update it for visual work  
+- Do not invent product colors in the harness package  
 
 ## OKF in the consumer
 
@@ -110,5 +118,6 @@ After install, compare local `.cursor/rules/` and `AGENTS.md` to harness rules.
 ## Related
 
 - Skill: `integrating-development-harness` (agent workflow)  
+- Skill: `authoring-design-md` (visual identity file)  
 - [Harness Deployment](/reference/harness-deployment.md)  
 - [Harness Rules — Model](/concepts/harness-rules-model.md)

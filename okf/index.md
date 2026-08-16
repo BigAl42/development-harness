@@ -24,11 +24,13 @@ Portable **Harness Rules** as an OKF v0.2 bundle. APM derives instructions and d
 * [Sharing Privacy](harness-rules/sharing-privacy.md) - Membership-scoped share, invite-only
 * [Web Push Privacy](harness-rules/web-push-privacy.md) - No broadcast push; secrets hygiene
 * [Mobile Web Shell](harness-rules/mobile-web-shell.md) - Portals, safe areas, touch/input defaults
+* [DESIGN.md Visual Identity](harness-rules/design-md.md) - Google Labs DESIGN.md for UI work
 
 # Guides
 
 * [Applying OKF v0.2](guides/okf-v0.2-application.md) - OKF spec + harness rules workflow
 * [Consumer Integration](guides/consumer-integration.md) - Add this package to a consumer repo via APM
+* [Applying DESIGN.md](guides/design-md-application.md) - Create/maintain consumer DESIGN.md
 
 # Reference
 

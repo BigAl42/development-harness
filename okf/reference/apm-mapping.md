@@ -26,9 +26,11 @@ Harness rules live in `okf/harness-rules/`. APM instructions are the deployable 
 | `harness-rules/sharing-privacy.md` | `sharing-privacy.instructions.md` | sharing-privacy | acl / invite / membership |
 | `harness-rules/web-push-privacy.md` | `web-push-privacy.instructions.md` | web-push-privacy | push / SW / notifications |
 | `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | mobile-web-shell | tsx/jsx/css / shell / nav |
+| `harness-rules/design-md.md` | `design-md.instructions.md` | design-md | DESIGN.md + UI/CSS |
 | `harness-rules/agent-principles.md` | Skill `harness-rules` (reference) | agent-principles | — |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application | `okf/**`, `.apm/**`, `apm.yml` |
 | `guides/consumer-integration.md` | `consumer-integration.instructions.md` | consumer-integration | `apm.yml`, lockfile, AGENTS, local rules |
+| `guides/design-md-application.md` | `design-md-application.instructions.md` | design-md-application | DESIGN.md, apm.yml |
 
 ### Skills
 
@@ -36,3 +38,4 @@ Harness rules live in `okf/harness-rules/`. APM instructions are the deployable 
 |-------|------|------|
 | `harness-rules` | `.apm/skills/harness-rules/` | Author/maintain this package |
 | `integrating-development-harness` | `.apm/skills/integrating-development-harness/` | Wire this package into a consumer repo |
+| `authoring-design-md` | `.apm/skills/authoring-design-md/` | Create/update consumer root DESIGN.md |
