@@ -25,10 +25,11 @@ Playbook for **consumer** repositories (e.g. trackers) that depend on `BigAl42/d
 curl -sSL https://aka.ms/apm-unix | sh   # if APM CLI missing
 ```
 
-Pin a released tag (never `main` for consumers):
+Pin a released tag (prefer SemVer for reproducibility; `latest` tracks the tip):
 
 ```text
 BigAl42/development-harness#v0.6.0
+# or: BigAl42/development-harness#latest
 ```
 
 ## Minimal `apm.yml` (Cursor-only)
