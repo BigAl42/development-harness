@@ -28,3 +28,11 @@ Harness rules live in `okf/harness-rules/`. APM instructions are the deployable 
 | `harness-rules/mobile-web-shell.md` | `mobile-web-shell.instructions.md` | mobile-web-shell | tsx/jsx/css / shell / nav |
 | `harness-rules/agent-principles.md` | Skill `harness-rules` (reference) | agent-principles | — |
 | `guides/okf-v0.2-application.md` | `okf-v0.2-application.instructions.md` | okf-v0.2-application | `okf/**`, `.apm/**`, `apm.yml` |
+| `guides/consumer-integration.md` | `consumer-integration.instructions.md` | consumer-integration | `apm.yml`, lockfile, AGENTS, local rules |
+
+### Skills
+
+| Skill | Path | Role |
+|-------|------|------|
+| `harness-rules` | `.apm/skills/harness-rules/` | Author/maintain this package |
+| `integrating-development-harness` | `.apm/skills/integrating-development-harness/` | Wire this package into a consumer repo |

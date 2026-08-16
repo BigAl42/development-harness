@@ -28,6 +28,7 @@ Portable **Harness Rules** as an OKF v0.2 bundle. APM derives instructions and d
 # Guides
 
 * [Applying OKF v0.2](guides/okf-v0.2-application.md) - OKF spec + harness rules workflow
+* [Consumer Integration](guides/consumer-integration.md) - Add this package to a consumer repo via APM
 
 # Reference
 
