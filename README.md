@@ -20,7 +20,7 @@ okf/harness-rules/     ← definition (Harness Rule, harness-agnostic)
 
 Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.md)
 
-## Harness rules (v0.5.0)
+## Harness rules (v0.6.0)
 
 | Harness Rule | File | APM `applyTo` |
 |--------------|------|---------------|
@@ -36,15 +36,18 @@ Details: [okf/concepts/harness-rules-model.md](okf/concepts/harness-rules-model.
 | Sharing Privacy | `okf/harness-rules/sharing-privacy.md` | acl / invite / membership |
 | Web Push Privacy | `okf/harness-rules/web-push-privacy.md` | push / SW / notifications |
 | Mobile Web Shell | `okf/harness-rules/mobile-web-shell.md` | tsx/jsx/css / shell / nav |
+| DESIGN.md Visual Identity | `okf/harness-rules/design-md.md` | DESIGN.md + UI/CSS |
 
-**Project rules** (domain modules, stack-specific paths, collection names) stay in the target repo and complement harness rules.
+**Project rules** (domain modules, stack-specific paths, collection names) stay in the target repo and complement harness rules. Product visual tokens live in the consumer’s root **`DESIGN.md`**.
 
 ### Guides & skills
 
 | Artifact | Path |
 |----------|------|
 | Consumer Integration (playbook) | `okf/guides/consumer-integration.md` |
+| Applying DESIGN.md (playbook) | `okf/guides/design-md-application.md` |
 | Skill: integrate into a consumer repo | `.apm/skills/integrating-development-harness/` |
+| Skill: author consumer DESIGN.md | `.apm/skills/authoring-design-md/` |
 | Skill: author/maintain this package | `.apm/skills/harness-rules/` |
 
 All documentation in this package is **English**.
@@ -61,7 +64,7 @@ Pinned harnesses for this package (see `targets:` in `apm.yml`): Cursor, Claude,
 
 ## Consumer project
 
-Prefer the playbook and skill above. Minimal pin:
+Prefer the playbooks and skills above. Minimal pin:
 
 ```yaml
 name: my-app
@@ -70,7 +73,7 @@ targets:
   - cursor
 dependencies:
   apm:
-    - BigAl42/development-harness#v0.5.0
+    - BigAl42/development-harness#v0.6.0
   mcp: []
 ```
 
@@ -79,6 +82,8 @@ apm install              # deploys harness rules to declared targets
 apm compile              # writes AGENTS.md / CLAUDE.md / GEMINI.md as needed
 apm compile --validate   # CI-friendly check without writing
 ```
+
+UI consumers: add repo-root `DESIGN.md` ([Google Labs format](https://github.com/google-labs-code/design.md)) via skill `authoring-design-md`.
 
 ## Maintenance
 
@@ -90,7 +95,8 @@ apm compile --validate   # CI-friendly check without writing
 ## Links
 
 - [Consumer Integration](okf/guides/consumer-integration.md)
+- [Applying DESIGN.md](okf/guides/design-md-application.md)
+- [DESIGN.md Spec](https://github.com/google-labs-code/design.md)
 - [OKF v0.2 Spec](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md)
 - [Microsoft APM](https://microsoft.github.io/apm/)
 - [Harness Deployment](okf/reference/harness-deployment.md)
-- [APM Instructions & agents](https://microsoft.github.io/apm/producer/author-primitives/instructions-and-agents/)
